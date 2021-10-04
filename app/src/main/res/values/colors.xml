@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#228fb9</color>
+    <color name="colorPrimaryDark">#1d86b5</color>
+    <color name="colorAccent">#cf2228</color>
+<!--        -->
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#99FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="forgot">#d1f4f9</color>
+    <color name="red">#BA0D4C</color>
+    <color name="red_back">#c40505</color>
+    <color name="green">#228fb9</color>
+    <color name="light_red">#ccc5c7</color>
+    <color name="hollo">#606060</color>
+    <color name="light_gray_green1">#2ab7ca</color>
+    <color name="light_gray_green2">#0e9aa7</color>
+    <color name="gray">#e1e1e1</color>
+    <color name="dark_gray">#aaaaaa</color>
+    <color name="Lightgray">#efefef</color>
+    <color name="header">#086196</color>
+    <color name="lightblue">#C8D0D5</color>
+
+    <color name="transcolor">#B3ffffff</color>
+    <color name="default_shadow_color">#88757575</color>
+    <color name="coolGrey">#8f8f97</color>
+    <color name="vermillion">#f52323</color>
+    <color name="whiteEight">#d8d8d8</color>
+    <color name="greyishBrownSix">#4a4a4a</color>
+    <color name="greyish">#b7b7b7</color>
+
+    <color name="offWhiteTwo">#fffced</color>
+    <color name="greyishBrownFour">#4d4c47</color>
+    <color name="warmGreyFour">#707070</color>
+    <color name="whiteFive">#f1f1f1</color>
+    <color name="mediumPinkTwo">#f05b78</color>
+    <color name="greyishBrownSeven">#3f3f3f</color>
+    <color name="macaroniAndCheeseThree">#e5a939</color>
+    <color name="whiteTwo">#ffffff</color>
+
+    <!-- <color name="green_color">#56B9A4</color>-->
+    <color name="green_color">#228fb9</color>
+    <color name="light_green">#E4EFF3</color>
+    <color name="cardview_bg">#E4EFF3</color>
+
+    <color name="whitelight">#F6F3F3</color>
+
+
+    <color name="light_green_color">#9fd7cb</color>
+    <color name="orange_color">#ffc900</color>
+    <color name="orange">#ffc900</color>
+    <color name="missed_red">#ef728a</color>
+    <color name="medium_green">#4caf50</color>
+    <!--  <color name="new_light_green">#56B9A4</color>-->
+    <color name="new_light_green">#1f8cb9</color>
+    <color name="new_txt_color">#444444</color>
+    <color name="new_sec_txt_color">#888888</color>
+    <!--   <color name="new_green_btn">#56B9A4</color>-->
+    <color name="new_green_btn">#1987b5</color>
+    <color name="orange_bgm_color">#fbdd68</color>
+    <color name="light_orange">#fff6d6</color>
+    <color name="new_orange_bgm_color">#FCDD68</color>
+    <color name="new_four_txt_color">#999999</color>
+    <color name="new_tri_txt_color">#555555</color>
+    <color name="missed_red_color">#ED3558</color>
+    <color name="blue">#34B2DC</color>
+
+    <color name="placeholder_bg">#dddddd</color>
+
+    <color name="blue_color">#34B2DC</color>
+    <color name="sort_by_bg">#F4F4F4</color>
+    <color name="bg_white">#FFFFFF</color>
+
+    <!-- <color name="new_header_bg">#E8571E</color>-->
+    <color name="new_header_bg">#FFFFFF</color>
+    <color name="new_shop_bg">#7AD1C0</color>
+    <color name="new_txt_header">#141414</color>
+    <color name="new_secondtxt">#2E2E2E</color>
+    <color name="new_footer_change_blue">#448ECA</color>
+    <!-- <color name="new_view_more">#009377</color>-->
+    <color name="new_view_more">#296F67</color>
+
+    <color name="selected_dots">#37BFAF</color>
+    <color name="unselected_dots">#B9F1EA</color>
+
+
+
+    <color name="new_red">#E8571E</color>
+    <color name="new_light_black">#2E2E2E</color>
+    <color name="new_off">#9BD152</color>
+    <color name="solid_bg">#7AD1C0</color>
+    <color name="new_thick_orange_bgm_color">#F8B232</color>
+
+    <color name="new_green_bgm_color">#7AD1C0</color>
+    <color name="new_greenish_bgm_color">#9BD152</color>
+    <color name="new_red_bgm_color">#FF6B7F</color>
+
+
+    <color name="new_thick_red_bgm_color">#E8571E</color>
+    <color name="new_gree_color">#1f8cb9</color>
+    <color name="darker_grey_new">#515151</color>
+
+
+</resources>

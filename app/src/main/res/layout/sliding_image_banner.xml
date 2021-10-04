@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    app:cardCornerRadius="16dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+                <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                    android:id="@+id/itemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:siShape="@drawable/rounded_rect"
+                    android:scaleType="fitXY"
+                    android:alpha="1" />
+        <TextView
+            android:id="@+id/txt_banner_title"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/futuramediumbt"
+            android:text="@string/services"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:maxLines="3"
+            android:gravity="center"/>
+
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>

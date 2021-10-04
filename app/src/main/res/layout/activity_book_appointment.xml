@@ -1,0 +1,518 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include
+            android:id="@+id/include_petlover_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/toolbar_layout_petlover_header" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollablContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerView"
+        android:layout_below="@+id/headerView">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_curved_corner"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/spr_selectyourpettype"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/option"
+                    tools:ignore="ContentDescription"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/futuramediumbt"
+                android:text="@string/or"
+                android:textColor="@color/new_txt_color"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/edt_petname"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_curved_corner"
+                android:fontFamily="@font/futuramediumbt"
+                android:hint="@string/pet_name"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textColor="@color/new_light_green"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor"
+                android:maxLines="1"
+                android:maxLength="25"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txt_pettype"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_curved_corner"
+                android:fontFamily="@font/futuramediumbt"
+                android:padding="15dp"
+                android:textColor="@color/new_light_green"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txt_petbreed"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_curved_corner"
+                android:fontFamily="@font/futuramediumbt"
+                android:hint="@string/pet_name"
+                android:padding="15dp"
+                android:textColor="@color/new_light_green"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor"
+                android:visibility="gone"/>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_pettype"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_curved_corner"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/sprpettype"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/option"
+                    tools:ignore="ContentDescription"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_petbreed"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_curved_corner"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/sprpetbreed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/option"
+                    tools:ignore="ContentDescription"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+
+
+            <RadioGroup
+                android:id="@+id/rg_appointmenttype"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/new_green_btn"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:text="@string/emergency"
+                    android:textColor="@color/new_txt_color"
+                    tools:ignore="UnusedAttribute" />
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/new_green_btn"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:text="@string/normal"
+                    android:textColor="@color/new_txt_color"
+                    tools:ignore="UnusedAttribute"
+                    android:checked="true"/>
+
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edt_allergies"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_curved_corner"
+                android:fontFamily="@font/futuramediumbt"
+                android:hint="@string/allergies"
+                android:padding="15dp"
+                android:textColor="@color/new_light_green"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:inputType="text"
+                android:digits="@string/characters"/>
+
+            <TextView
+                android:id="@+id/txt_lbl_uploadpet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/futuramediumbt"
+                android:text="@string/image_upload"
+                android:textColor="@color/new_txt_color"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pet_pics"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                    <TextView
+                        android:id="@+id/txt_pet_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangular_curved_corner"
+                        android:focusable="false"
+                        android:fontFamily="@font/futuramediumbt"
+                        android:hint="@string/choose"
+                        android:inputType="none"
+                        android:padding="15dp"
+                        android:textColorHint="@color/dark_gray"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="5dp"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/img_add" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_upload_pet_images"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/img_pet_imge"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image"
+                android:src="@drawable/upload"
+                android:visibility="gone"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdvw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/light_green"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_below="@id/linear1"
+                    android:background="@drawable/rounded_corner_button"
+                    android:elevation="9dp"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/edt_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rectangular_curved_corner"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:gravity="start"
+                    android:hint="@string/add_comment_here"
+                    android:padding="15dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/new_light_green"
+                    android:textColorHint="@color/dark_gray"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,LabelFor"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
+                    android:maxLength="150"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:gravity="center"
+                    android:text="@string/communicationtype"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_communicationtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn"
+                        android:fontFamily="@font/futuramediumbt"
+                        android:text="@string/online"
+                        android:textColor="@color/new_txt_color"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_visit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:buttonTint="@color/new_green_btn"
+                        android:fontFamily="@font/futuramediumbt"
+                        android:text="@string/visit"
+                        android:textColor="@color/new_txt_color"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_visit_group">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:gravity="center"
+                    android:text="@string/visittype"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_visit_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn"
+                        android:fontFamily="@font/futuramediumbt"
+                        android:text="@string/visithome"
+                        android:textColor="@color/new_txt_color"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_clinic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:buttonTint="@color/new_green_btn"
+                        android:fontFamily="@font/futuramediumbt"
+                        android:text="@string/visitclinic"
+                        android:textColor="@color/new_txt_color"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+<!--
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/new_rounded_corner_btn"
+            android:fontFamily="@font/futuramediumbt"
+            android:text="@string/book_appointment"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size_for_header" />
+
+-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@drawable/new_rounded_corner_btn_red"
+            tools:ignore="UselessParent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:id="@+id/ll_save_continue"
+          >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/futuramediumbt"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/next_icon_white"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="10dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/new_light_green"
+        app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+    <TextView
+        android:id="@+id/txt_no_records"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/norecordsfound"
+        android:textColor="@color/color"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

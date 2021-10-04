@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/ll_days"
+                android:layout_marginTop="5dp">
+                <CheckBox
+                        android:id="@+id/ch_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:gravity="center_horizontal"
+                    android:text="Monday"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="end"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginLeft="20dp">
+                   <ImageView
+                       android:id="@+id/img_edit"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:src="@drawable/ic_baseline_edit_24"
+                       android:layout_marginEnd="10dp"
+                       android:scaleType="centerInside"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginRight="10dp" />
+               </RelativeLayout>
+                </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item android:id="@+id/nav_item_one"
+            android:icon="@drawable/myappointments"
+            android:title="@string/my_appointments" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item android:id="@+id/nav_item_two"
+            android:icon="@drawable/calendermenu"
+            android:title="@string/my_calendar" />
+    </group>
+
+
+    <!--
+       <item android:id="@+id/nav_item_genre"
+        android:icon="@drawable/referral"
+        android:title="Genre" />-->
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+        <item android:id="@+id/nav_item_three"
+        android:icon="@drawable/manageservices"
+        android:title="@string/manage_services" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group4">
+    <item android:id="@+id/nav_item_four"
+        android:icon="@drawable/myorders"
+        android:title="@string/my_orders" />
+    </group>
+
+
+        <group android:checkableBehavior="single"
+            android:id="@+id/group5">
+        <item android:id="@+id/nav_item_five"
+            android:icon="@drawable/like"
+            android:title="@string/favourites" />
+        </group>
+
+        <group android:checkableBehavior="single"
+            android:id="@+id/group6">
+        <item android:id="@+id/nav_item_six"
+            android:icon="@drawable/discount"
+            android:title="@string/my_coupons"
+            android:visible="false"/>
+        </group>
+
+    <group android:checkableBehavior="single"
+            android:id="@+id/group7">
+        <item android:id="@+id/nav_item_seven"
+            android:icon="@drawable/ic_payment"
+            android:title="@string/payment_details"
+            android:visible="false"
+            />
+        </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group8">
+        <item android:id="@+id/nav_item_eight"
+            android:icon="@drawable/ic_notifications"
+            android:title="@string/notification"
+            android:visible="true"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group9">
+    <item android:id="@+id/nav_item_nine"
+        android:icon="@drawable/logout"
+        android:title="@string/logout" />
+    </group>
+
+
+
+</menu>

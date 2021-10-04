@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="5dp">
+           <TextView
+               android:id="@+id/txt_contact"
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:ellipsize="end"
+               android:fontFamily="@font/futuramediumbt"
+               android:maxLines="1"
+               android:text="@string/contact"
+               android:textColor="@color/new_tri_txt_color"
+               android:textSize="14sp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"/>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp">
+
+               <ImageView
+                   android:id="@+id/img_menu"
+                   android:layout_width="15dp"
+                   android:layout_height="15dp"
+                   android:layout_alignParentEnd="true"
+                   android:layout_gravity="end"
+                   android:src="@drawable/options"
+                   tools:ignore="ContentDescription" />
+           </RelativeLayout>
+       </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_phn_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/futuramediumbt"
+            android:maxLines="1"
+            android:text="@string/phn_nu"
+            android:textColor="@color/new_tri_txt_color"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/img_select"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:background="@drawable/ic_baseline_check_24"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

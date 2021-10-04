@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_corner">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_discount_per_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_corner"
+            android:fontFamily="@font/futuramediumbt"
+            android:hint="@string/enter_discount_per_unit"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/green"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="14sp"
+            tools:ignore="Autofill,LabelFor"
+            android:imeOptions="actionDone"/>
+        <TextView
+            android:id="@+id/txt_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:fontFamily="@font/futuramediumbt"
+            android:maxLines="1"
+            android:text="@string/or"
+            android:textColor="@color/new_txt_color"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edt_deal_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_corner"
+            android:fontFamily="@font/futuramediumbt"
+            android:hint="@string/enter_deal_price"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/green"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="14sp"
+            tools:ignore="Autofill,LabelFor"
+            android:imeOptions="actionDone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:id="@+id/ll_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/futuramediumbt"
+                android:maxLines="1"
+                android:text="Before Discount"
+                android:textColor="@color/new_txt_color"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_discount_price_label"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:maxLines="1"
+                    android:text="Discount"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_discount_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:maxLines="1"
+                    android:text="@string/discount_price"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_discount_perc_label"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:maxLines="1"
+                    android:text="Cost"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:maxLines="1"
+                    android:text="@string/discount"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_deal_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_corner"
+            android:fontFamily="@font/futuramediumbt"
+            android:hint="Select Deal Start Date"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/green"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="14sp"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/txt_deal_expriy_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_corner"
+            android:fontFamily="@font/futuramediumbt"
+            android:hint="@string/select_deal_expiry_date"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/green"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="14sp"
+            tools:ignore="Autofill,LabelFor" />
+
+
+        <Button
+            android:id="@+id/btn_apply_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/new_rounded_corner_btn"
+            android:fontFamily="@font/futuramediumbt"
+            android:text="@string/apply_discount"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:indicatorColor="@color/new_green_btn"
+        app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+</RelativeLayout>
+ 

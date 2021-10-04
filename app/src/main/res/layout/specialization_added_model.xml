@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/rectangle_corner_green"
+    android:layout_marginLeft="10dp">
+
+    <!--Dynamically adding Specialization Details-->
+
+          <TextView
+            android:id="@+id/added_specialization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:fontFamily="@font/futuramediumbt"
+            android:hint="@string/specialization"
+            android:textColorHint="@color/white"
+            android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/image"
+        android:padding="3dp"
+        android:src="@drawable/ic_baseline_close_white24" />
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_find"
+        android:icon="@drawable/ic_right"
+        android:title="Find"/>
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_right"
+        android:title="Home"/>
+    <item
+        android:id="@+id/action_Appointment"
+        android:icon="@drawable/ic_right"
+        android:title="Appointment"/>
+</menu>

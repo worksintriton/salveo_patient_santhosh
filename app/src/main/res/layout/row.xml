@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".9"
+            android:layout_height="wrap_content"
+            android:text="Tablet Name"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_tabletname"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".9"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_quanity"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:theme="@style/MyCheckBox"
+                    android:id="@+id/chx_m"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:theme="@style/MyCheckBox"
+                    android:id="@+id/chx_a"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:theme="@style/MyCheckBox"
+                    android:id="@+id/chx_n"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Consumption"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_consumption"
+            android:visibility="gone"
+
+            />
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_baseline_remove_circle_outline_24"
+            android:id="@+id/remove"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

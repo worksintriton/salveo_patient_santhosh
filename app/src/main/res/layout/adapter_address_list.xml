@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/light_green_bgm"
+    android:padding="10dp"
+    android:layout_marginTop="5dp"
+    android:id="@+id/rl_root">
+
+    <ImageView
+        android:id="@+id/iv_default_location"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/circledot"
+        tools:ignore="ContentDescription"
+        android:visibility="gone"/>
+
+
+
+    <TextView
+        android:id="@+id/txt_location_nickname"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/futuramediumbt"
+        android:maxLines="1"
+        android:text="@string/address_info"
+        android:textColor="@color/new_txt_color"
+        android:textSize="18sp"
+        tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:layout_toEndOf="@+id/txt_location_nickname"
+            android:id="@+id/txt_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/futuramediumbt"
+            android:maxLines="1"
+            android:text="Default"
+            android:textColor="@color/bg_white"
+            android:textSize="12sp"
+            tools:ignore="RelativeOverlap"
+            android:background="@drawable/new_rounded_corner_btn"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/img_settings"
+            android:layout_width="23dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/options"
+            tools:ignore="ContentDescription" />
+
+
+
+
+    <TextView
+        android:id="@+id/txt_location_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_location_nickname"
+        android:layout_alignStart="@id/txt_location_nickname"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/futuramediumbt"
+        android:lineSpacingExtra="8sp"
+        android:maxLines="1"
+        android:text="@string/locationnickname"
+        android:textColor="@color/new_txt_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_location_title"
+        android:layout_alignStart="@id/txt_location_title"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/futuramediumbt"
+        android:lineSpacingExtra="8sp"
+        android:maxLines="2"
+        android:text="@string/address_info"
+        android:textColor="@color/new_txt_color"
+        android:textSize="14sp"
+        android:layout_marginEnd="20dp" />
+
+</RelativeLayout>

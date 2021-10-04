@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll_headername"
+        android:layout_marginEnd="10dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/txt_medicine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/medicine"
+            android:textColor="@color/new_txt_color"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/txt_noofdays"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/no_of_days"
+            android:textColor="@color/new_txt_color"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/txt_consumptionperday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/consumption_per_day"
+            android:textColor="@color/new_txt_color"
+            android:layout_marginStart="10dp"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/chx_m"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:theme="@style/MyCheckBox"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <CheckBox
+                    android:id="@+id/chx_a"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:theme="@style/MyCheckBox"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <CheckBox
+                    android:id="@+id/chx_n"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:theme="@style/MyCheckBox"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_baseline_add_circle_outline_24"
+            android:visibility="invisible"
+            android:layout_marginStart="10dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
