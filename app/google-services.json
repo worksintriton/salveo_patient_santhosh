@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "876915533380",
+    "project_id": "mysalveopartners",
+    "storage_bucket": "mysalveopartners.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876915533380:android:51db6cacfab2dfc97cbe11",
+        "android_client_info": {
+          "package_name": "com.salveo.mysalveo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876915533380-tj99u895ofeoonncbmas83hp4oqqt1vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPsm1gSQevm34lMUrkJS2mSV8pbV2J9uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876915533380-tj99u895ofeoonncbmas83hp4oqqt1vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876915533380:android:7c21fc3fa25554337cbe11",
+        "android_client_info": {
+          "package_name": "com.salveo.mysalveopartners"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876915533380-tj99u895ofeoonncbmas83hp4oqqt1vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPsm1gSQevm34lMUrkJS2mSV8pbV2J9uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876915533380-tj99u895ofeoonncbmas83hp4oqqt1vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

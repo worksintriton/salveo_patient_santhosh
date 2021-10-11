@@ -65,7 +65,7 @@
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    android:src="@drawable/ic_notifications"
+                    android:src="@drawable/ic_notification_new"
                     tools:ignore="ContentDescription" />
                 <ImageView
                     android:layout_width="24dp"
@@ -77,7 +77,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_user"
+                    android:src="@drawable/profile"
                     tools:ignore="ContentDescription"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -130,6 +130,17 @@
         android:orientation="vertical"
         android:layout_above="@+id/footerView"
         android:layout_below="@+id/headerView">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvNoRecords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No records found"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:visibility="gone"/>
+
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/refresh_layout"
             android:layout_width="match_parent"
@@ -141,18 +152,9 @@
                 android:layout_height="match_parent"
                 android:id="@+id/rvnotifiaction"
                 android:layout_margin="10dp"
+                android:visibility="visible"
                 />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-        <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/tvNoRecords"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No records found"
-            android:textSize="16sp"
-            android:textColor="@color/color"
-            android:gravity="center"
-            android:visibility="gone"/>
 
 
     </LinearLayout>

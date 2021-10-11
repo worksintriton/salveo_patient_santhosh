@@ -467,7 +467,7 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
     private FBTokenUpdateRequest fbTokenUpdateRequest() {
         FBTokenUpdateRequest fbTokenUpdateRequest = new FBTokenUpdateRequest();
         fbTokenUpdateRequest.setUser_id(userid);
-        fbTokenUpdateRequest.setFb_token("");
+        fbTokenUpdateRequest.setFb_token(token);
         Log.w(TAG,"fbTokenUpdateRequest"+ "--->" + new Gson().toJson(fbTokenUpdateRequest));
         //  Toasty.success(getApplicationContext(),"fbTokenUpdateRequest : "+new Gson().toJson(fbTokenUpdateRequest), Toast.LENGTH_SHORT, true).show();
 

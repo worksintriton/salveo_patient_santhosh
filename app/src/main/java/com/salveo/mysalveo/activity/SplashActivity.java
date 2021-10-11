@@ -54,6 +54,14 @@ public class SplashActivity extends AppCompatActivity {
             String user_type = bundle.getString("usertype");
             String appintments = bundle.getString("appintments");
             String orders = bundle.getString("orders");
+            if(user_type == null){
+                HashMap<String, String> user = session.getProfileDetails();
+                user_type = user.get(SessionManager.KEY_TYPE);
+                Log.w(TAG,"user_type if :"+user_type);
+            }else{
+                user_type = bundle.getString("usertype");
+                Log.w(TAG,"user_type else :"+user_type);
+            }
 
             if(!islogedin) {
                 Intent i = new Intent(SplashActivity.this, LoginActivity.class);

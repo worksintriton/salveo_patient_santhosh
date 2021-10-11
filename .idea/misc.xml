@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TritonAppsGIt/salveo_patient_santhosh/app/src/main/res/layout/activity_my_coupons.xml" value="0.12360688956433637" />
         <entry key="..\:/Workspace/Petfolio_clone_salveo_patient/app/src/main/res/drawable/dashed_border.xml" value="0.2911458333333333" />
         <entry key="..\:/Workspace/Petfolio_clone_salveo_patient/app/src/main/res/drawable/horizontal_dotted_line_green.xml" value="0.2640625" />
         <entry key="..\:/Workspace/Petfolio_clone_salveo_patient/app/src/main/res/drawable/ic_home_updated.xml" value="0.2640625" />
@@ -50,7 +51,7 @@
       <item index="0" class="java.lang.String" itemvalue="android.annotation.SuppressLint" />
     </list>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

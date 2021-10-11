@@ -173,7 +173,7 @@ public class MyCouponsActivity extends AppCompatActivity {
                         }else{
                             rvnotifiaction.setVisibility(View.GONE);
                             tvNorecords.setVisibility(View.VISIBLE);
-                            tvNorecords.setText(getResources().getString(R.string.no_notifications));
+                            tvNorecords.setText("No coupons");
 
                         }
 
