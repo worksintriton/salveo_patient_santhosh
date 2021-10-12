@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -105,6 +106,10 @@ public class SelectedServiceActivity extends AppCompatActivity implements View.O
     RelativeLayout rl_filters;
 
     @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_filter)
+    EditText edt_filter;
+
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.scrollview)
     NestedScrollView scrollablContent;
 
@@ -142,7 +147,7 @@ public class SelectedServiceActivity extends AppCompatActivity implements View.O
     int currentPage = 0;
 
 
-     /* Petlover Bottom Navigation */
+    /* Petlover Bottom Navigation */
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.rl_home)
     RelativeLayout rl_home;
@@ -268,7 +273,7 @@ public class SelectedServiceActivity extends AppCompatActivity implements View.O
             selectedprice = extras.getString("selectedprice");
 
 
-           }
+        }
         Log.w(TAG,"selectedprice : "+selectedprice+" distance  : "+distance);
 
 
@@ -306,6 +311,7 @@ public class SelectedServiceActivity extends AppCompatActivity implements View.O
         img_cart.setOnClickListener(this);
         img_profile.setOnClickListener(this);
         rl_filters.setOnClickListener(this);
+        edt_filter.setOnClickListener(this);
     }
 
     /**
@@ -568,7 +574,10 @@ public class SelectedServiceActivity extends AppCompatActivity implements View.O
             case R.id.img_profile:
                 goto_Profile();
                 break;
-                case R.id.rl_filters:
+            case R.id.rl_filters:
+                goto_SPFilter();
+                break;
+            case R.id.edt_filter:
                 goto_SPFilter();
                 break;
 
@@ -650,11 +659,11 @@ public class SelectedServiceActivity extends AppCompatActivity implements View.O
     }
     public void hideLoadingSPnotavl() {
         try {
-                distance = 1;
+            distance = 1;
 
-                if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
-                    SPSpecificServiceDetailsResponseCall(distance, reviewcount, Count_value_start, Count_value_end);
-                }
+            if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
+                SPSpecificServiceDetailsResponseCall(distance, reviewcount, Count_value_start, Count_value_end);
+            }
 
 
             alertDialog.dismiss();

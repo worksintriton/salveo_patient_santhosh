@@ -720,7 +720,7 @@ public class SPProductDetailsActivity extends AppCompatActivity implements View.
     private void setView(List<FetchProductByIdResponse.ProductDetailsBean.ProductRelatedBean> product_related) {
         rv_relatedproducts.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
         rv_relatedproducts.setItemAnimator(new DefaultItemAnimator());
-        RelatedProductsAdapter relatedProductsAdapter = new RelatedProductsAdapter(getApplicationContext(), product_related, prod_type,true);
+        RelatedProductsAdapter relatedProductsAdapter = new RelatedProductsAdapter(getApplicationContext(), product_related, prod_type,true,TAG);
         rv_relatedproducts.setAdapter(relatedProductsAdapter);
 
     }

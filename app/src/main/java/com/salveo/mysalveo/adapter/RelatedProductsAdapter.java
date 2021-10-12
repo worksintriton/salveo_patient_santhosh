@@ -19,11 +19,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.salveo.mysalveo.R;
 import com.salveo.mysalveo.api.APIClient;
+import com.salveo.mysalveo.doctor.shop.DoctorProductDetailsActivity;
 import com.salveo.mysalveo.petlover.ProductDetailsActivity;
 import com.salveo.mysalveo.responsepojo.FetchProductByIdResponse;
+import com.salveo.mysalveo.serviceprovider.shop.SPProductDetailsActivity;
 
 import java.util.List;
-
 
 public class RelatedProductsAdapter extends  RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -34,13 +35,16 @@ public class RelatedProductsAdapter extends  RecyclerView.Adapter<RecyclerView.V
     FetchProductByIdResponse.ProductDetailsBean.ProductRelatedBean currentItem;
     String prod_type;
     boolean check;
+    String fromactivity;
 
 
-    public RelatedProductsAdapter(Context context, List<FetchProductByIdResponse.ProductDetailsBean.ProductRelatedBean> product_related, String prod_type, boolean b) {
+    public RelatedProductsAdapter(Context context, List<FetchProductByIdResponse.ProductDetailsBean.ProductRelatedBean> product_related, String prod_type, boolean b,String fromactivity) {
         this.product_related = product_related;
         this.context = context;
         this.prod_type=prod_type;
         this.check=b;
+        this.fromactivity=fromactivity;
+
 
     }
 
@@ -122,10 +126,10 @@ public class RelatedProductsAdapter extends  RecyclerView.Adapter<RecyclerView.V
 
         if(currentItem.getProduct_discount_price() != 0){
             holder.txt_product_discount_price.setVisibility(View.VISIBLE);
-            holder.txt_product_discount_price.setText("\u20B9 "+currentItem.getProduct_discount_price());
+            holder.txt_product_discount_price.setText("INR "+currentItem.getProduct_discount_price());
             holder.txt_product_discount_price.setPaintFlags(holder.txt_product_discount_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }else{
-            holder.txt_product_discount_price.setText("\u20B9 "+0);
+            holder.txt_product_discount_price.setText("INR "+0);
             holder.txt_product_discount_price.setVisibility(View.GONE);
         }
 
@@ -133,7 +137,7 @@ public class RelatedProductsAdapter extends  RecyclerView.Adapter<RecyclerView.V
             holder.txt_products_offer.setVisibility(View.VISIBLE);
             holder.txt_products_offer.setText(currentItem.getProduct_discount()+" % off");
         }else{
-            holder.txt_products_offer.setVisibility(View.GONE);
+            holder.txt_products_offer.setVisibility(View.INVISIBLE);
 
         }
 
@@ -148,14 +152,14 @@ public class RelatedProductsAdapter extends  RecyclerView.Adapter<RecyclerView.V
                     .into(holder.img_fav);
         }
 
+        Log.w(TAG,"Thumbnail_image"+currentItem.getThumbnail_image());
 
         if (currentItem.getThumbnail_image() != null && !currentItem.getThumbnail_image().isEmpty()) {
             Glide.with(context)
                     .load(currentItem.getThumbnail_image())
                     .into(holder.img_products_image);
 
-        }
-        else{
+        } else{
             Glide.with(context)
                     .load(APIClient.PROFILE_IMAGE_URL)
                     .into(holder.img_products_image);
@@ -164,10 +168,25 @@ public class RelatedProductsAdapter extends  RecyclerView.Adapter<RecyclerView.V
         holder.ll_root.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ProductDetailsActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("productid",product_related.get(position).get_id());
-                intent.putExtra("fromactivity",TAG);
-                context.startActivity(intent);
+                if(fromactivity != null){
+                    if(fromactivity.equalsIgnoreCase("DoctorProductDetailsActivity")){
+                        Intent intent = new Intent(context, DoctorProductDetailsActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("productid",product_related.get(position).get_id());
+                        intent.putExtra("fromactivity",TAG);
+                        context.startActivity(intent);
+                    } else if(fromactivity.equalsIgnoreCase("ProductDetailsActivity")){
+                        Intent intent = new Intent(context, ProductDetailsActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("productid",product_related.get(position).get_id());
+                        intent.putExtra("fromactivity",TAG);
+                        context.startActivity(intent);
+                    } else if(fromactivity.equalsIgnoreCase("SPProductDetailsActivity")){
+                        Intent intent = new Intent(context, SPProductDetailsActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("productid",product_related.get(position).get_id());
+                        intent.putExtra("fromactivity",TAG);
+                        context.startActivity(intent);
+                    }
+                }
+
             }
 
         });
@@ -222,3 +241,6 @@ public class RelatedProductsAdapter extends  RecyclerView.Adapter<RecyclerView.V
 
 
 }
+
+
+

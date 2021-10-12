@@ -125,6 +125,10 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     ImageView img_remove_product;
 
     @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.ll_increment_add_to_cart)
+    LinearLayout ll_increment_add_to_cart;
+
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.img_add_product)
     ImageView img_add_product;
 
@@ -157,7 +161,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     private int productqty;
     private String tag;
 
-        // BottomSheetBehavior variable
+    // BottomSheetBehavior variable
     private BottomSheetBehavior bottomSheetBehavior;
 
     @SuppressLint("NonConstantResourceId")
@@ -258,7 +262,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     RelativeLayout rl_homes;
 
 
-    @SuppressLint("LogNotTimber")
+    @SuppressLint({"LogNotTimber", "SetTextI18n"})
     @Override
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -291,10 +295,15 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
 //        });
 
 
+        ll_increment_add_to_cart.setVisibility(View.GONE);
+
+
         if(userid != null && productid != null){
+
             if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
-                fetch_product_by_id_ResponseCall();
+                notificationandCartCountResponseCall();
             }
+
         }
         txt_cart_count.setText("1");
         img_remove_product.setOnClickListener(v -> {
@@ -307,7 +316,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                     if(product_cart_counts == 1){
                         txt_cart_label.setText("Add to cart");
                     }else{
-                       // txt_cart_label.setText("Go to cart");
+                        // txt_cart_label.setText("Go to cart");
                     }
 
                 }else{
@@ -372,6 +381,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
             }
         });
 
+
         /*serv*/
         title_care.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
         img_care.setImageResource(R.drawable.grey_care);
@@ -389,8 +399,6 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         rl_comn.setOnClickListener(this);
         rl_homes.setOnClickListener(this);
 
-
-
       /*  txt_cart_label.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -404,12 +412,6 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
 
             }
         });*/
-
-
-
-
-
-
 
         viewPager.setVisibility(View.GONE);
 
@@ -434,11 +436,11 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
 
         rl_discount.setVisibility(View.GONE);
 
-       txt_products_quantity.setVisibility(View.GONE);
+        txt_products_quantity.setVisibility(View.GONE);
 
         txt_prod_desc_label.setVisibility(View.GONE);
 
-  //      txt_view_details.setVisibility(View.GONE);
+        //      txt_view_details.setVisibility(View.GONE);
 
         txt_product_desc.setVisibility(View.GONE);
 
@@ -446,6 +448,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
 
     }
 
+    @SuppressLint("LogNotTimber")
     private void favResponseCall() {
 
         avi_indicator.setVisibility(View.VISIBLE);
@@ -490,7 +493,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     @SuppressLint("LogNotTimber")
     private ProductFavCreateRequest productFavCreateRequest() {
 
-        /**
+        /*
          * product_id : 602e11404775fa0735d7bf40
          * user_id : 604081d12c2b43125f8cb840
          */
@@ -679,12 +682,12 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                 avi_indicator.smoothToHide();
                 if (response.body() != null) {
                     if(200 == response.body().getCode()){
-                        if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
-                            notificationandCartCountResponseCall();
-                        }
+
 
                         Log.w(TAG,"FetchProductByIdResponse" + new Gson().toJson(response.body()));
                         if(response.body().getProduct_details() != null){
+
+                            Log.w(TAG,"Product_fav : "+response.body().getProduct_details().isProduct_fav());
 
                             if(response.body().getProduct_details().isProduct_fav()){
                                 img_fav.setBackgroundResource(R.drawable.ic_fav);
@@ -717,15 +720,15 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                                     prod_type = response.body().getProduct_details().getCat_id().getProduct_cate();
                                 }
 
-                               if(response.body().getVendor_details().getBussiness_name() != null) {
-                                   business_name = response.body().getVendor_details().getBussiness_name();
-                               }
-                               if(response.body().getVendor_details().getUser_name() != null){
-                                   vendor_name = response.body().getVendor_details().getUser_name();
-                               }
-                               if( response.body().getVendor_details().getBusiness_reg() != null){
-                                   bussiness_reg = response.body().getVendor_details().getBusiness_reg();
-                               }
+                                if(response.body().getVendor_details().getBussiness_name() != null) {
+                                    business_name = response.body().getVendor_details().getBussiness_name();
+                                }
+                                if(response.body().getVendor_details().getUser_name() != null){
+                                    vendor_name = response.body().getVendor_details().getUser_name();
+                                }
+                                if( response.body().getVendor_details().getBusiness_reg() != null){
+                                    bussiness_reg = response.body().getVendor_details().getBusiness_reg();
+                                }
                                 if(response.body().getVendor_details().getBussiness_loc() != null) {
                                     business_location = response.body().getVendor_details().getBussiness_loc();
                                 }
@@ -760,7 +763,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
 
                             txt_prod_desc_label.setVisibility(View.VISIBLE);
 
-                       //     txt_view_details.setVisibility(View.VISIBLE);
+                            //     txt_view_details.setVisibility(View.VISIBLE);
 
                             txt_product_desc.setVisibility(View.VISIBLE);
 
@@ -769,17 +772,14 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                             setBottomSheet();
 
                             img_fav.setOnClickListener(ProductDetailsActivity.this);
-                            img_cart.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    Intent intent = new Intent(getApplicationContext(),PetCartActivity.class);
-                                    intent.putExtra("productid",productid);
-                                    intent.putExtra("cat_id",cat_id);
-                                    intent.putExtra("fromactivity",fromactivity);
-                                    intent.putExtra("fromto",TAG);
-                                    intent.putExtra("tag",tag);
-                                    startActivity(intent);
-                                }
+                            img_cart.setOnClickListener(view -> {
+                                Intent intent = new Intent(getApplicationContext(),PetCartActivity.class);
+                                intent.putExtra("productid",productid);
+                                intent.putExtra("cat_id",cat_id);
+                                intent.putExtra("fromactivity",fromactivity);
+                                intent.putExtra("fromto",TAG);
+                                intent.putExtra("tag",tag);
+                                startActivity(intent);
                             });
 
                             if(response.body().getProduct_details().getProduct_img() != null && response.body().getProduct_details().getProduct_img().size()>0){
@@ -811,9 +811,10 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     }
 
     private void setView(List<FetchProductByIdResponse.ProductDetailsBean.ProductRelatedBean> product_related) {
+        rv_relatedproducts.setNestedScrollingEnabled(false);
         rv_relatedproducts.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
         rv_relatedproducts.setItemAnimator(new DefaultItemAnimator());
-        RelatedProductsAdapter relatedProductsAdapter = new RelatedProductsAdapter(getApplicationContext(), product_related,prod_type, false);
+        RelatedProductsAdapter relatedProductsAdapter = new RelatedProductsAdapter(getApplicationContext(), product_related,prod_type, false,TAG);
         rv_relatedproducts.setAdapter(relatedProductsAdapter);
 
     }
@@ -886,6 +887,15 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
 
 
         }
+        else{
+            hand_img1.setBackgroundResource(R.drawable.ic_logo_graycolor);
+            hand_img2.setBackgroundResource(R.drawable.ic_logo_graycolor);
+            hand_img3.setBackgroundResource(R.drawable.ic_logo_graycolor);
+            hand_img4.setBackgroundResource(R.drawable.ic_logo_graycolor);
+            hand_img5.setBackgroundResource(R.drawable.ic_logo_graycolor);
+
+        }
+
         if(product_price != 0 ){
             txt_products_price.setText("INR "+product_price);
 
@@ -899,22 +909,31 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
             rl_discount.setVisibility(View.GONE);
         }
         if(threshould != null && !threshould.isEmpty() ){
-            if(threshould.equalsIgnoreCase("0")){
+            int mythreshould = 0;
+            try {
+                mythreshould = Integer.parseInt(threshould);
+            } catch(NumberFormatException nfe) {
+                System.out.println("Could not parse " + nfe);
+            }
+
+            if(mythreshould <= 0){
                 txt_products_quantity.setVisibility(View.VISIBLE);
-              txt_products_quantity.setText("Out Of Stock");
-               txt_products_quantity.setTextColor(ContextCompat.getColor(ProductDetailsActivity.this, R.color.vermillion));
+                txt_products_quantity.setText("Out Of Stock");
+                ll_increment_add_to_cart.setVisibility(View.GONE);
+                txt_products_quantity.setTextColor(ContextCompat.getColor(ProductDetailsActivity.this, R.color.vermillion));
                 img_add_product.setVisibility(View.GONE);
                 txt_cart_count.setVisibility(View.GONE);
                 img_remove_product.setVisibility(View.GONE);
                 ll_add_to_cart.setVisibility(View.GONE);
             }else{
+                ll_increment_add_to_cart.setVisibility(View.VISIBLE);
                 img_add_product.setVisibility(View.VISIBLE);
                 txt_cart_count.setVisibility(View.VISIBLE);
                 img_remove_product.setVisibility(View.VISIBLE);
                 ll_add_to_cart.setVisibility(View.VISIBLE);
                 txt_products_quantity.setVisibility(View.GONE);
-             //   txt_products_quantity.setText("Prodcut Quantity : "+threshould);
-               // txt_products_quantity.setTextColor(ContextCompat.getColor(ProductDetailsActivity.this, R.color.black));
+                //   txt_products_quantity.setText("Prodcut Quantity : "+threshould);
+                // txt_products_quantity.setTextColor(ContextCompat.getColor(ProductDetailsActivity.this, R.color.black));
 
             }
 
@@ -946,8 +965,9 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         Log.w(TAG,"fetchByIdRequest"+ "--->" + new Gson().toJson(fetchByIdRequest));
         return fetchByIdRequest;
     }
+    @SuppressLint("LogNotTimber")
     private CartAddProductRequest cartAddProductRequest() {
-        /**
+        /*
          * user_id : 603e27792c2b43125f8cb802
          * product_id : 602e4940f62e8d2089fba978
          * count : 3
@@ -1003,6 +1023,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         });
 
     }
+    @SuppressLint("LogNotTimber")
     public void cart_add_product_ResponseCall(){
         avi_indicator.setVisibility(View.VISIBLE);
         avi_indicator.smoothToShow();
@@ -1145,18 +1166,21 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         Log.w(TAG,"NotificationCartCountResponse url  :%s"+" "+ call.request().url().toString());
 
         call.enqueue(new Callback<NotificationCartCountResponse>() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(@NonNull Call<NotificationCartCountResponse> call, @NonNull Response<NotificationCartCountResponse> response) {
 
                 Log.w(TAG,"NotificationCartCountResponse"+ "--->" + new Gson().toJson(response.body()));
 
-                  avi_indicator.smoothToHide();
+                avi_indicator.smoothToHide();
 
                 if (response.body() != null) {
                     if(response.body().getCode() == 200) {
+                        if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
+                            fetch_product_by_id_ResponseCall();
+                        }
                         if(response.body().getData()!=null){
-                           int Notification_count = response.body().getData().getNotification_count();
-                           int Product_count = response.body().getData().getProduct_count();
+                            int Product_count = response.body().getData().getProduct_count();
                             if(Product_count != 0){
                                 txt_cart_count_badge.setVisibility(View.VISIBLE);
                                 txt_cart_count_badge.setText(""+Product_count);

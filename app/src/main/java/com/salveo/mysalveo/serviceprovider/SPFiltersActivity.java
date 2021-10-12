@@ -67,6 +67,10 @@ public class SPFiltersActivity extends AppCompatActivity implements View.OnClick
     RadioGroup rg_review;
 
     @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.rb_five_star)
+    RadioButton rb_five_star;
+
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.rb_four_star)
     RadioButton rb_four_star;
 
@@ -118,7 +122,10 @@ public class SPFiltersActivity extends AppCompatActivity implements View.OnClick
                     rb_three_star.setChecked(true);
                 }else if (reviewcount == 4) {
                     rb_four_star.setChecked(true);
+                }else if (reviewcount == 5) {
+                    rb_five_star.setChecked(true);
                 }
+
 
             }
 
@@ -128,6 +135,7 @@ public class SPFiltersActivity extends AppCompatActivity implements View.OnClick
         btn_apply.setOnClickListener(this);
         btn_clear.setOnClickListener(this);
 
+        rb_five_star.setOnClickListener(this);
         rb_four_star.setOnClickListener(this);
         rb_three_star.setOnClickListener(this);
         rb_two_star.setOnClickListener(this);
@@ -153,13 +161,13 @@ public class SPFiltersActivity extends AppCompatActivity implements View.OnClick
 
 
             if(spFilterPriceList != null && spFilterPriceList.size()>0){
-               for(int i =0; i<spFilterPriceList.size();i++){
-                   if (selectedprice != null && selectedprice.equalsIgnoreCase(spFilterPriceList.get(i).getDisplay_text())) {
-                       Count_value_start = spFilterPriceList.get(i).getCount_value_start();
-                       Count_value_end = spFilterPriceList.get(i).getCount_value_end();
-                   }
-                   }
-               Log.w(TAG,"Count_value_start : "+Count_value_start+" Count_value_end : "+Count_value_end);
+                for(int i =0; i<spFilterPriceList.size();i++){
+                    if (selectedprice != null && selectedprice.equalsIgnoreCase(spFilterPriceList.get(i).getDisplay_text())) {
+                        Count_value_start = spFilterPriceList.get(i).getCount_value_start();
+                        Count_value_end = spFilterPriceList.get(i).getCount_value_end();
+                    }
+                }
+                Log.w(TAG,"Count_value_start : "+Count_value_start+" Count_value_end : "+Count_value_end);
 
 
             }
@@ -278,6 +286,11 @@ public class SPFiltersActivity extends AppCompatActivity implements View.OnClick
                 Count_value_end = 0;
 
                 break;
+            case R.id.rb_five_star:
+                reviewcount = 5;
+                clearRadioChecked();
+                rb_five_star.setChecked(true);
+                break;
 
             case R.id.rb_four_star:
                 reviewcount = 4;
@@ -285,22 +298,22 @@ public class SPFiltersActivity extends AppCompatActivity implements View.OnClick
                 rb_four_star.setChecked(true);
                 break;
 
-                case R.id.rb_three_star:
-                    reviewcount = 3;
-                    clearRadioChecked();
-                    rb_three_star.setChecked(true);
+            case R.id.rb_three_star:
+                reviewcount = 3;
+                clearRadioChecked();
+                rb_three_star.setChecked(true);
                 break;
 
-                case R.id.rb_two_star:
-                    reviewcount = 2;
-                    clearRadioChecked();
-                    rb_two_star.setChecked(true);
+            case R.id.rb_two_star:
+                reviewcount = 2;
+                clearRadioChecked();
+                rb_two_star.setChecked(true);
                 break;
 
-                case R.id.rb_one_star:
-                    reviewcount = 1;
-                    clearRadioChecked();
-                    rb_one_star.setChecked(true);
+            case R.id.rb_one_star:
+                reviewcount = 1;
+                clearRadioChecked();
+                rb_one_star.setChecked(true);
                 break;
 
         }
@@ -321,6 +334,7 @@ public class SPFiltersActivity extends AppCompatActivity implements View.OnClick
     }
 
     public void clearRadioChecked() {
+        rb_five_star.setChecked(false);
         rb_four_star.setChecked(false);
         rb_three_star.setChecked(false);
         rb_two_star.setChecked(false);

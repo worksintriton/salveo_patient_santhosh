@@ -80,7 +80,7 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class AddYourFamilyMembersOldActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "AdurFamMemOldActivity";
+    private static final String TAG = "AddYourFamilyMembersOldActivity";
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.img_back)

@@ -152,6 +152,60 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_five_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/futuramediumbt"
+                        android:padding="2dp"
+                        android:text="@string/excellent"
+                        android:textColor="@color/new_txt_color"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -196,7 +250,7 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/futuramediumbt"
                         android:padding="2dp"
-                        android:text="@string/excellent"
+                        android:text="@string/above_average"
                         android:textColor="@color/new_txt_color"
                         android:textSize="16sp" />
 

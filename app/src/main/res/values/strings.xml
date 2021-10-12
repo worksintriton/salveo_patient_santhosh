@@ -604,4 +604,5 @@
     <string name="patient_name">Patient Name</string>
     <string name="image_upload">Image Upload</string>
     <string name="edit_your_family">Edit Family Members</string>
+    <string name="above_average">Above Average</string>
 </resources>

@@ -278,9 +278,12 @@ public class PetCartActivity extends AppCompatActivity implements AddandRemovePr
 
         img_back.setOnClickListener(v -> onBackPressed());
 
-            if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
-                fetch_cart_details_by_userid_Call();
-            }
+        if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
+            notificationandCartCountResponseCall();
+        }
+
+
+
 
         btn_shopnow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -402,9 +405,6 @@ public class PetCartActivity extends AppCompatActivity implements AddandRemovePr
                 avi_indicator.smoothToHide();
                 if (response.body() != null) {
                     if(200 == response.body().getCode()){
-                        if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
-                            notificationandCartCountResponseCall();
-                        }
 
                         Log.w(TAG,"CartDetailsResponse" + new Gson().toJson(response.body()));
                         footerView.setVisibility(View.VISIBLE);
@@ -529,6 +529,9 @@ public class PetCartActivity extends AppCompatActivity implements AddandRemovePr
 
                 if (response.body() != null) {
                     if(response.body().getCode() == 200) {
+                        if (new ConnectionDetector(getApplicationContext()).isNetworkAvailable(getApplicationContext())) {
+                            fetch_cart_details_by_userid_Call();
+                        }
                         if(response.body().getData()!=null){
                             int Notification_count = response.body().getData().getNotification_count();
                             int Product_count = response.body().getData().getProduct_count();
@@ -759,8 +762,6 @@ public class PetCartActivity extends AppCompatActivity implements AddandRemovePr
             @Override
             public void onResponse(@NonNull Call<SuccessResponse> call, @NonNull Response<SuccessResponse> response) {
                 avi_indicator.smoothToHide();
-
-
                 if (response.body() != null) {
                     if(200 == response.body().getCode()){
                         Log.w(TAG,"Add SuccessResponse" + new Gson().toJson(response.body()));
