@@ -754,9 +754,7 @@ public class PetCartActivity extends AppCompatActivity implements AddandRemovePr
         //Creating an object of our api interface
         RestApiInterface ApiService = APIClient.getClient().create(RestApiInterface.class);
         Call<SuccessResponse> call = ApiService.add_product_ResponseCall(RestUtils.getContentType(),addandRemoveCartRequest());
-
         Log.w(TAG,"url  :%s"+ call.request().url().toString());
-
         call.enqueue(new Callback<SuccessResponse>() {
             @SuppressLint({"LogNotTimber", "SetTextI18n"})
             @Override
