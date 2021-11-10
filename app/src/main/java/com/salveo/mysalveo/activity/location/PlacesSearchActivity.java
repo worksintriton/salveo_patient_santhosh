@@ -269,237 +269,227 @@ public class PlacesSearchActivity extends AppCompatActivity implements PlacesNam
 
                 Log.w(TAG,"addressResponseCall" + new Gson().toJson(response.body()));
 
+                try {
+                    if (response.body() != null) {
+                        List<AddressResultsResponse.ResultsBean> resultsBeanList = response.body().getResults();
+                        if (resultsBeanList.size() > 0) {
+                            double lat = resultsBeanList.get(0).getGeometry().getLocation().getLat();
+                            double lon = resultsBeanList.get(0).getGeometry().getLocation().getLng();
 
-                assert response.body() != null;
-                List<AddressResultsResponse.ResultsBean> resultsBeanList = response.body().getResults();
-                if (resultsBeanList.size() > 0 ) {
-                    double lat = resultsBeanList.get(0).getGeometry().getLocation().getLat();
-                    double lon = resultsBeanList.get(0).getGeometry().getLocation().getLng();
+                            Log.w(TAG, "addressResponseCall lat-->" + lat + " lon : " + lon);
+                            Log.w(TAG, "addressResponseCall cityname-->" + selectedPlaceName + " fromactivity : " + fromactivity);
 
-                    Log.w(TAG,"addressResponseCall lat-->"+lat+" lon : "+lon);
-                    Log.w(TAG,"addressResponseCall cityname-->"+selectedPlaceName+" fromactivity : "+fromactivity);
+                            if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationDenyActivity")) {
+                                Log.w(TAG, "if-->" + fromactivity);
 
-                    if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationDenyActivity")){
-                        Log.w(TAG,"if-->"+fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationDenyActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationEditActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
 
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationDenyActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }else if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationEditActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationEditActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
 
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationEditActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
+                                i.putExtra("id", id);
+                                i.putExtra("userid", userid);
+                                i.putExtra("nickname", locationnickname);
+                                i.putExtra("locationtype", LocationType);
+                                i.putExtra("defaultstatus", defaultstatus);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
 
-                        i.putExtra("id",id);
-                        i.putExtra("userid",userid);
-                        i.putExtra("nickname",locationnickname);
-                        i.putExtra("locationtype",LocationType);
-                        i.putExtra("defaultstatus",defaultstatus);
-                        startActivity(i);
-                    }else if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationDoctorActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationDoctorActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("ShippingAddressSPActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationSPActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationSPActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationSPActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationAddNewAddressActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAddNewAddressActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                i.putExtra("id", id);
+                                i.putExtra("userid", userid);
+                                i.putExtra("nickname", locationnickname);
+                                i.putExtra("data", (Serializable) Data);
+                                i.putExtra("product_total", prodouct_total);
+                                i.putExtra("shipping_charge", shipping_charge);
+                                i.putExtra("discount_price", discount_price);
+                                i.putExtra("grand_total", grand_total);
+                                i.putExtra("prodcut_count", prodcut_count);
+                                i.putExtra("prodcut_item_count", prodcut_item_count);
+                                i.putExtra("fromactivity", fromactivity);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationAddNewAddressSPActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAddNewAddressSPActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                i.putExtra("id", id);
+                                i.putExtra("userid", userid);
+                                i.putExtra("nickname", locationnickname);
+                                i.putExtra("data", (Serializable) Data);
+                                i.putExtra("product_total", prodouct_total);
+                                i.putExtra("shipping_charge", shipping_charge);
+                                i.putExtra("discount_price", discount_price);
+                                i.putExtra("grand_total", grand_total);
+                                i.putExtra("prodcut_count", prodcut_count);
+                                i.putExtra("prodcut_item_count", prodcut_item_count);
+                                i.putExtra("fromactivity", fromactivity);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("DoctorCartActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
 
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }else if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationDoctorActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationDoctorActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAddNewAddressActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                i.putExtra("id", id);
+                                i.putExtra("userid", userid);
+                                i.putExtra("nickname", locationnickname);
+                                i.putExtra("data", (Serializable) Data);
+                                i.putExtra("product_total", prodouct_total);
+                                i.putExtra("shipping_charge", shipping_charge);
+                                i.putExtra("discount_price", discount_price);
+                                i.putExtra("grand_total", grand_total);
+                                i.putExtra("prodcut_count", prodcut_count);
+                                i.putExtra("prodcut_item_count", prodcut_item_count);
+                                i.putExtra("fromactivity", fromactivity);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationDoctorNewActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, SetLocationDoctorNewActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationDoctorOldActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, SetLocationDoctorOldActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationSPNewActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, SetLocationSPNewActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationSPOldActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, SetLocationSPOldActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            } else if (fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationShippingAddressEditActivity")) {
+                                Log.w(TAG, "else if-->" + fromactivity);
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationShippingAddressEditActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                i.putExtra("id", id);
+                                i.putExtra("userid", userid);
+                                i.putExtra("nickname", locationnickname);
+
+                                i.putExtra("data", (Serializable) Data);
+                                i.putExtra("product_total", prodouct_total);
+                                i.putExtra("shipping_charge", shipping_charge);
+                                i.putExtra("discount_price", discount_price);
+                                i.putExtra("grand_total", grand_total);
+                                i.putExtra("prodcut_count", prodcut_count);
+                                i.putExtra("prodcut_item_count", prodcut_item_count);
+                                startActivity(i);
+                            } else {
+                                Log.w(TAG, "else -->" + "PickUpLocationAllowActivity");
+
+                                Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAllowActivity.class);
+                                i.putExtra("cityname", selectedPlaceName);
+                                i.putExtra("placesearchactivity", "placesearchactivity");
+                                Bundle b = new Bundle();
+                                b.putDouble("lat", lat);
+                                b.putDouble("lon", lon);
+                                i.putExtras(b);
+                                startActivity(i);
+                            }
+
+
+                        }
                     }
-
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("ShippingAddressSPActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationSPActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    } else if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationSPActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationSPActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }
-
-
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationAddNewAddressActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAddNewAddressActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        i.putExtra("id",id);
-                        i.putExtra("userid",userid);
-                        i.putExtra("nickname",locationnickname);
-                        i.putExtra("data", (Serializable) Data);
-                        i.putExtra("product_total",prodouct_total);
-                        i.putExtra("shipping_charge",shipping_charge);
-                        i.putExtra("discount_price",discount_price);
-                        i.putExtra("grand_total",grand_total);
-                        i.putExtra("prodcut_count",prodcut_count);
-                        i.putExtra("prodcut_item_count",prodcut_item_count);
-                        i.putExtra("fromactivity",fromactivity);
-                        startActivity(i);
-                    }
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationAddNewAddressSPActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAddNewAddressSPActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        i.putExtra("id",id);
-                        i.putExtra("userid",userid);
-                        i.putExtra("nickname",locationnickname);
-                        i.putExtra("data", (Serializable) Data);
-                        i.putExtra("product_total",prodouct_total);
-                        i.putExtra("shipping_charge",shipping_charge);
-                        i.putExtra("discount_price",discount_price);
-                        i.putExtra("grand_total",grand_total);
-                        i.putExtra("prodcut_count",prodcut_count);
-                        i.putExtra("prodcut_item_count",prodcut_item_count);
-                        i.putExtra("fromactivity",fromactivity);
-                        startActivity(i);
-                    }
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("DoctorCartActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAddNewAddressActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        i.putExtra("id",id);
-                        i.putExtra("userid",userid);
-                        i.putExtra("nickname",locationnickname);
-                        i.putExtra("data", (Serializable) Data);
-                        i.putExtra("product_total",prodouct_total);
-                        i.putExtra("shipping_charge",shipping_charge);
-                        i.putExtra("discount_price",discount_price);
-                        i.putExtra("grand_total",grand_total);
-                        i.putExtra("prodcut_count",prodcut_count);
-                        i.putExtra("prodcut_item_count",prodcut_item_count);
-                        i.putExtra("fromactivity",fromactivity);
-                        startActivity(i);
-                    }
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationDoctorNewActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, SetLocationDoctorNewActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationDoctorOldActivity")) {
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, SetLocationDoctorOldActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationSPNewActivity")){
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, SetLocationSPNewActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }
-                    else if(fromactivity != null && fromactivity.equalsIgnoreCase("SetLocationSPOldActivity")) {
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, SetLocationSPOldActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }else if(fromactivity != null && fromactivity.equalsIgnoreCase("PickUpLocationShippingAddressEditActivity")) {
-                        Log.w(TAG,"else if-->"+fromactivity);
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationShippingAddressEditActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        i.putExtra("id",id);
-                        i.putExtra("userid",userid);
-                        i.putExtra("nickname",locationnickname);
-
-                        i.putExtra("data", (Serializable) Data);
-                        i.putExtra("product_total",prodouct_total);
-                        i.putExtra("shipping_charge",shipping_charge);
-                        i.putExtra("discount_price",discount_price);
-                        i.putExtra("grand_total",grand_total);
-                        i.putExtra("prodcut_count",prodcut_count);
-                        i.putExtra("prodcut_item_count",prodcut_item_count);
-                        startActivity(i);
-                    }
-                    else{
-                        Log.w(TAG,"else -->"+"PickUpLocationAllowActivity");
-
-                        Intent i = new Intent(PlacesSearchActivity.this, PickUpLocationAllowActivity.class);
-                        i.putExtra("cityname",selectedPlaceName);
-                        i.putExtra("placesearchactivity","placesearchactivity");
-                        Bundle b = new Bundle();
-                        b.putDouble("lat", lat);
-                        b.putDouble("lon", lon);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }
-
-
-                }
+                }catch (Exception ignored){}
 
 
             }

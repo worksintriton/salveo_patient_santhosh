@@ -792,7 +792,6 @@ public class PetLoverDoctorChoosePaymentMethodActivity extends AppCompatActivity
         Call<NotificationSendResponse> call = ApiService.notificationSendResponseCall(RestUtils.getContentType(),notificationSendRequest());
 
         Log.w(TAG,"url  :%s"+ call.request().url().toString());
-
         call.enqueue(new Callback<NotificationSendResponse>() {
             @SuppressLint("LogNotTimber")
             @Override

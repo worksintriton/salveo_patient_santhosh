@@ -623,97 +623,89 @@ public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements 
                 //avi_indicator.smoothToHide();
                 Log.w(TAG,"url  :%s"+ call.request().url().toString());
 
+                try {
+                    if (response.body() != null) {
+                        String currentplacename = null;
+                        String compundcode = null;
+
+                        if (response.body().getPlus_code().getCompound_code() != null) {
+                            compundcode = response.body().getPlus_code().getCompound_code();
+                        }
+                        if (compundcode != null) {
+                            String[] separated = compundcode.split(",");
+                            String placesname = separated[0];
+                            String[] splitData = placesname.split("\\s", 2);
+                            String code = splitData[0];
+                            currentplacename = splitData[1];
+                            Log.w(TAG, "currentplacename : " + currentplacename);
+                        }
 
 
-
-                if(response.body() != null) {
-                    String currentplacename = null;
-                    String compundcode = null;
-
-                    if(response.body().getPlus_code().getCompound_code() != null){
-                        compundcode = response.body().getPlus_code().getCompound_code();
-                    }
-                    if(compundcode != null) {
-                        String[] separated = compundcode.split(",");
-                        String placesname = separated[0];
-                        String[] splitData = placesname.split("\\s", 2);
-                        String code = splitData[0];
-                        currentplacename = splitData[1];
-                        Log.w(TAG,"currentplacename : "+currentplacename);
-                    }
+                        String localityName = null;
+                        String sublocalityName = null;
+                        String CityName = null;
+                        String postalCode;
 
 
+                        List<GetAddressResultResponse.ResultsBean> getAddressResultResponseList;
+                        getAddressResultResponseList = response.body().getResults();
+                        if (getAddressResultResponseList.size() > 0) {
+                            String AddressLine = getAddressResultResponseList.get(0).getFormatted_address();
+
+                        }
+                        List<GetAddressResultResponse.ResultsBean.AddressComponentsBean> addressComponentsBeanList = response.body().getResults().get(0).getAddress_components();
+                        if (addressComponentsBeanList != null) {
+                            if (addressComponentsBeanList.size() > 0) {
+                                for (int i = 0; i < addressComponentsBeanList.size(); i++) {
+
+                                    for (int j = 0; j < addressComponentsBeanList.get(i).getTypes().size(); j++) {
+
+                                        List<String> typesList = addressComponentsBeanList.get(i).getTypes();
+
+                                        if (typesList.contains("postal_code")) {
+                                            postalCode = addressComponentsBeanList.get(i).getShort_name();
+                                            String PostalCode = postalCode;
+
+                                        }
+                                        if (typesList.contains("locality")) {
+                                            CityName = addressComponentsBeanList.get(i).getLong_name();
+                                            localityName = addressComponentsBeanList.get(i).getShort_name();
+                                            Log.w(TAG, "CityName : " + CityName + "localityName : " + localityName);
 
 
-                    String localityName = null;
-                    String sublocalityName = null;
-                    String CityName = null;
-                    String postalCode;
+                                        }
+
+                                        if (currentplacename != null) {
+                                            txt_location.setText(currentplacename);
+                                        } else if (CityName != null) {
+                                            txt_location.setText(CityName);
+                                        } else if (localityName != null) {
+                                            txt_location.setText(localityName);
+                                        } else {
+                                            txt_location.setText("");
+                                        }
+
+                                        if (typesList.contains("administrative_area_level_2")) {
+                                            cityName = addressComponentsBeanList.get(i).getShort_name();
+                                            //  CityName = cityName;
 
 
-                    List<GetAddressResultResponse.ResultsBean> getAddressResultResponseList;
-                    getAddressResultResponseList = response.body().getResults();
-                    if (getAddressResultResponseList.size() > 0) {
-                        String AddressLine = getAddressResultResponseList.get(0).getFormatted_address();
+                                        }
+                                        if (typesList.contains("sublocality_level_1")) {
+                                            sublocalityName = addressComponentsBeanList.get(i).getShort_name();
+                                            Log.w(TAG, "sublocalityName : " + sublocalityName);
 
-                    }
-                    List<GetAddressResultResponse.ResultsBean.AddressComponentsBean> addressComponentsBeanList = response.body().getResults().get(0).getAddress_components();
-                    if(addressComponentsBeanList != null) {
-                        if (addressComponentsBeanList.size() > 0) {
-                            for (int i = 0; i < addressComponentsBeanList.size(); i++) {
-
-                                for (int j = 0; j < addressComponentsBeanList.get(i).getTypes().size(); j++) {
-
-                                    List<String> typesList = addressComponentsBeanList.get(i).getTypes();
-
-                                    if (typesList.contains("postal_code")) {
-                                        postalCode = addressComponentsBeanList.get(i).getShort_name();
-                                        String PostalCode = postalCode;
-
-                                    }
-                                    if (typesList.contains("locality")) {
-                                        CityName = addressComponentsBeanList.get(i).getLong_name();
-                                        localityName = addressComponentsBeanList.get(i).getShort_name();
-                                        Log.w(TAG,"CityName : "+CityName+"localityName : "+localityName);
-
-
-                                    }
-
-                                    if(currentplacename != null){
-                                        txt_location.setText(currentplacename);
-                                    }else if(CityName != null){
-                                        txt_location.setText(CityName);
-                                    }else if(localityName != null){
-                                        txt_location.setText(localityName);
-                                    }else{
-                                        txt_location.setText("");
-                                    }
-
-                                    if (typesList.contains("administrative_area_level_2")) {
-                                        cityName = addressComponentsBeanList.get(i).getShort_name();
-                                        //  CityName = cityName;
-
-
-
-
-                                    }
-                                    if (typesList.contains("sublocality_level_1")) {
-                                        sublocalityName = addressComponentsBeanList.get(i).getShort_name();
-                                        Log.w(TAG,"sublocalityName : "+sublocalityName);
+                                        }
 
                                     }
 
                                 }
 
+
                             }
-
-
-
-
-
                         }
                     }
-                }
+                }catch (Exception ignored){}
 
 
             }
