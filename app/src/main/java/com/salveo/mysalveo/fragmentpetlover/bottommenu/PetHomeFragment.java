@@ -212,6 +212,7 @@ public class PetHomeFragment extends Fragment implements Serializable,
 
 
     }
+    SessionManager sessionManager;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -245,7 +246,7 @@ public class PetHomeFragment extends Fragment implements Serializable,
         txt_puppy_love.setVisibility(View.GONE);
         txt_seemore_puppy_love.setVisibility(View.GONE);
 
-        SessionManager sessionManager = new SessionManager(mContext);
+         sessionManager = new SessionManager(mContext);
         HashMap<String, String> user = sessionManager.getProfileDetails();
         userid = user.get(SessionManager.KEY_ID);
         Log.w(TAG,"customerid-->"+userid);
@@ -461,6 +462,9 @@ public class PetHomeFragment extends Fragment implements Serializable,
                         }
 
 
+                        if(response.body().getData().getPaymentdetails() != null){
+                            sessionManager.createRazorpayDetails(response.body().getData().getPaymentdetails().getApi_key(),response.body().getData().getPaymentdetails().getMode());
+                        }
 
 
                     }

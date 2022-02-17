@@ -125,6 +125,7 @@ public class SelectYourPetActivity extends AppCompatActivity implements View.OnC
     private String SP_ava_Date,petname;
     private Dialog alertDialog;
     private Dialog dialog;
+    private SessionManager sessionManager;
 
 
     @SuppressLint({"LogNotTimber", "SetTextI18n"})
@@ -137,7 +138,7 @@ public class SelectYourPetActivity extends AppCompatActivity implements View.OnC
         ll_save_continue.setVisibility(View.GONE);
 
 
-        SessionManager sessionManager = new SessionManager(SelectYourPetActivity.this);
+        sessionManager = new SessionManager(SelectYourPetActivity.this);
         HashMap<String, String> user = sessionManager.getProfileDetails();
         userid = user.get(SessionManager.KEY_ID);
         String name = user.get(SessionManager.KEY_FIRST_NAME);
@@ -512,6 +513,11 @@ public class SelectYourPetActivity extends AppCompatActivity implements View.OnC
         final Activity activity = this;
 
         final Checkout co = new Checkout();
+        HashMap<String, String> sessionRazorpayDetails = sessionManager.getRazorpayDetails();
+        String rzpayapikey = sessionRazorpayDetails.get(SessionManager.KEY_RAZORPAY_APIKEY);
+        Log.w(TAG,"startPayment rzpayapikey : " + rzpayapikey);
+        // set your id as below
+        co.setKeyID(rzpayapikey);
 
         //totalamount = amount;
 

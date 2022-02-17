@@ -213,6 +213,7 @@ public class PetLoverServiceChoosePaymentMethodActivity extends AppCompatActivit
     private String servicetime;
     private String SP_ava_Date;
     private int distance;
+    private SessionManager sessionManager;
 
     @SuppressLint({"LogNotTimber", "SetTextI18n"})
     @Override
@@ -222,7 +223,7 @@ public class PetLoverServiceChoosePaymentMethodActivity extends AppCompatActivit
         ButterKnife.bind(this);
         Log.w(TAG,"onCreate");
 
-        SessionManager sessionManager = new SessionManager(getApplicationContext());
+        sessionManager = new SessionManager(getApplicationContext());
         HashMap<String, String> user = sessionManager.getProfileDetails();
         userid = user.get(SessionManager.KEY_ID);
 
@@ -602,6 +603,11 @@ public class PetLoverServiceChoosePaymentMethodActivity extends AppCompatActivit
         final Activity activity = this;
 
         final Checkout co = new Checkout();
+        HashMap<String, String> sessionRazorpayDetails = sessionManager.getRazorpayDetails();
+        String rzpayapikey = sessionRazorpayDetails.get(SessionManager.KEY_RAZORPAY_APIKEY);
+        Log.w(TAG,"startPayment rzpayapikey : " + rzpayapikey);
+        // set your id as below
+        co.setKeyID(rzpayapikey);
 
         //totalamount = amount;
 

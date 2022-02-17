@@ -33,7 +33,6 @@ import com.salveo.mysalveo.doctor.DoctorDashboardActivity;
 import com.salveo.mysalveo.interfaces.AddandRemoveProductListener;
 
 
-import com.salveo.mysalveo.petlover.PetCartActivity;
 import com.salveo.mysalveo.petlover.ShippingAddressActivity;
 import com.salveo.mysalveo.requestpojo.FetchByIdRequest;
 import com.salveo.mysalveo.requestpojo.NotificationCartCountRequest;
@@ -209,6 +208,7 @@ public class DoctorCartActivity extends AppCompatActivity implements AddandRemov
     RelativeLayout rl_homes;
 
     private Dialog dialog;
+    private SessionManager sessionManager;
 
     @SuppressLint("LogNotTimber")
     @Override
@@ -224,7 +224,7 @@ public class DoctorCartActivity extends AppCompatActivity implements AddandRemov
         footerView.setVisibility(View.GONE);
         txt_cart_count_badge.setVisibility(View.GONE);
 
-        SessionManager sessionManager = new SessionManager(getApplicationContext());
+        sessionManager = new SessionManager(getApplicationContext());
         HashMap<String, String> user = sessionManager.getProfileDetails();
         userid = user.get(SessionManager.KEY_ID);
 
@@ -805,6 +805,11 @@ public class DoctorCartActivity extends AppCompatActivity implements AddandRemov
         final Activity activity = this;
 
         final Checkout co = new Checkout();
+        HashMap<String, String> sessionRazorpayDetails = sessionManager.getRazorpayDetails();
+        String rzpayapikey = sessionRazorpayDetails.get(SessionManager.KEY_RAZORPAY_APIKEY);
+        Log.w(TAG,"startPayment rzpayapikey : " + rzpayapikey);
+        // set your id as below
+        co.setKeyID(rzpayapikey);
 
         //totalamount = amount;
 

@@ -7,7 +7,7 @@ public class PetLoverDashboardResponse{
     /**
      * Status : Success
      * Message : Pet Lover Dashboard Details
-     * Data : {"SOS":[{"Number":9876543210},{"Number":9876543211},{"Number":9876543212},{"Number":9876543214}],"LocationDetails":[{"_id":"603e39522c2b43125f8cb809","user_id":"603e388f2c2b43125f8cb808","location_state":"TN","location_country":"India","location_city":"Chennai","location_pin":"600042","location_address":"5-38A, 2nd Main Rd, Ram Nagar, Karnam Street, Karunabigai Colony, Velachery, Chennai, Tamil Nadu 600042, India","location_lat":12.9832535692558,"location_long":80.22351376712322,"location_title":"Home","location_nickname":"park hotel","default_status":true,"date_and_time":"02-03-2021 06:40 PM","mobile_type":"IOS","delete_status":false,"updatedAt":"2021-03-02T13:10:42.571Z","createdAt":"2021-03-02T13:10:42.571Z","__v":0}],"PetDetails":[{"pet_img":[{"pet_img":"http://54.212.108.156:3000/api/uploads/1614864579584.603e388f2c2b43125f8cb8080403185939"},{"pet_img":"http://54.212.108.156:3000/api/uploads/1614864587880.603e388f2c2b43125f8cb8080403185947"}],"_id":"6040dfcb2c2b43125f8cb8b5","user_id":"603e388f2c2b43125f8cb808","pet_name":"jimmy ","pet_type":"Dog","pet_breed":"Golden Retrieve","pet_gender":"Male","pet_color":"white","pet_weight":10.12,"pet_age":"0 years 2 months","pet_dob":"02-01-2021","pet_spayed":true,"pet_purebred":false,"pet_frnd_with_dog":true,"pet_frnd_with_cat":false,"pet_frnd_with_kit":true,"pet_microchipped":true,"pet_tick_free":false,"pet_private_part":false,"vaccinated":true,"last_vaccination_date":"04-02-2021","default_status":true,"date_and_time":"04-03-2021 06:59 PM","mobile_type":"IOS","delete_status":false,"updatedAt":"2021-03-04T13:29:49.575Z","createdAt":"2021-03-04T13:25:31.366Z","__v":0}],"userdetails":{"_id":"603e388f2c2b43125f8cb808","first_name":"Sri","last_name":"ram","user_email":"","user_phone":"1222222221","date_of_reg":"02-03-2021 06:37 PM","user_type":1,"user_status":"complete","otp":123456,"profile_img":"","user_email_verification":false,"fb_token":"de5HE6dVrEixslsoO4vaZD:APA91bHCXR7pZPh_GotF8SfzlBB6r8o8Rrn39YMhDqYI7i3np0sR4zsSPB1Q3GZfEGS_0-Frl0et2vQjuSiXexTDfauEDRc7MA69nhhWbj-GmRmclzuPYQpAgwaVm-oe7KyzBDxCHHGa","device_id":"","device_type":"","mobile_type":"IOS","delete_status":false,"updatedAt":"2021-04-09T07:43:29.794Z","createdAt":"2021-03-02T13:07:27.079Z","__v":0},"Dashboarddata":{"Banner_details":[{"_id":"602e3a1bf62e8d2089fba972","title":"Title 4","img_path":"http://54.212.108.156:3000/api/uploads/SS.jpg"},{"_id":"6035074245c5f677b63c3a68","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1614087999003.jpg"},{"_id":"6035075845c5f677b63c3a69","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1614088020969.jpg"},{"_id":"6035077545c5f677b63c3a6b","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1614088050207.jpg"}],"Doctor_details":[{"_id":"6040832b2c2b43125f8cb843","doctor_name":"Dr .Albert Doctor","doctor_img":"http://54.212.108.156:3000/api/uploads/1614840819938.jpg","specialization":[{"specialization":"Surgeon"},{"specialization":"Internal Medicine Physician"}],"distance":"0.00","clinic_name":"Care Medical Hospital","fav":true,"star_count":5,"review_count":22},{"_id":"6040a24a2c2b43125f8cb866","doctor_name":"Dr.paveen kumar Doctor","doctor_img":"http://54.212.108.156:3000/api/uploads/1614848727515.jpg","specialization":[{"specialization":"Surgeon"},{"specialization":"Internal Medicine Physician"}],"distance":"0.00","clinic_name":"Zen clinic","fav":true,"star_count":5,"review_count":22},{"_id":"603f3e382c2b43125f8cb817","doctor_name":"test","doctor_img":"http://54.212.108.156:3000/api/uploads/1614758959722.png","specialization":[{"specialization":"Family Physician"}],"distance":"310.40","clinic_name":"tre","fav":true,"star_count":5,"review_count":22},{"_id":"603e2a7b2c2b43125f8cb805","doctor_name":"DineshKumar Deva","doctor_img":"http://54.212.108.156:3000/api/uploads/1614688613605.jpeg","specialization":[{"specialization":"Surgeon"},{"specialization":"Internal Medicine Physician"},{"specialization":"Psychiatrist"},{"specialization":"Testing Spef"},{"specialization":"Dermatologist"}],"distance":"8948.52","clinic_name":"Apollo pharmacy","fav":true,"star_count":5,"review_count":22}],"Service_details":[{"_id":"5fe185d61996f651f5133693","service_icon":"http://54.212.108.156:3000/api/uploads/1617889303126.png","service_title":" Dog Walking","background_color":"#F9A826"},{"_id":"5ff7f5171c72093650a13a14","service_icon":"http://54.212.108.156:3000/api/uploads/1617889319529.png","service_title":" Dog Grooming","background_color":"#FF7A7A"},{"_id":"5ff815d4414b1052a09bb2b1","service_icon":"http://54.212.108.156:3000/api/uploads/1617889353269.png","service_title":" Dog Training","background_color":"#9BD152"},{"_id":"602d1fc0562e0916bc9b3245","service_icon":"http://54.212.108.156:3000/api/uploads/1617889386383.png","service_title":"Dog Obedience Training.","background_color":"#009377"},{"_id":"602d1fd0562e0916bc9b3247","service_icon":"http://54.212.108.156:3000/api/uploads/1617889386383.png","service_title":" Pet Sitting","background_color":"#FF0000"},{"_id":"603dc7a01ef90c51d57cf775","service_icon":"http://54.212.108.156:3000/api/uploads/1617889353269.png","service_title":"Hair Cutting","background_color":"#FF6F00"}],"middle_Banner_details":[{"_id":"1231231","title":"banner - 1","img_path":"http://mysalveo.com/api/uploads/images.jpeg"},{"_id":"1231231","title":"banner - 2","img_path":"http://mysalveo.com/api/uploads/images.jpeg"},{"_id":"1231231","title":"banner - 3","img_path":"http://mysalveo.com/api/uploads/images.jpeg"}],"Products_details":[{"_id":"602e11404775fa0735d7bf40","product_img":"http://54.212.108.156:3000/api/uploads/resize-1613548631141238608collar.jpg","cat_name":"PET COLLARS & LEASHES","product_title":"DOGISTA PET PRODUCTS Dog Rope Leash,Brass","product_price":180,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e467ff62e8d2089fba973","product_img":"http://54.212.108.156:3000/api/uploads/1615955637906.jpeg","cat_name":"Cat Food","product_title":"Cat Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e46d8f62e8d2089fba974","product_img":"http://54.212.108.156:3000/api/uploads/1615955710860.jpeg","cat_name":"Cow food","product_title":"Cow food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e4734f62e8d2089fba975","product_img":"http://54.212.108.156:3000/api/uploads/1615955852371.jpeg","cat_name":"Bird Food","product_title":"Bird Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e478af62e8d2089fba976","product_img":"http://54.212.108.156:3000/api/uploads/Product \u2013 2.png","cat_name":"Cat Food","product_title":"Bellotta | Cat Food","product_price":2580,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0}],"Puppy_Products_details":[{"_id":"602e11404775fa0735d7bf40","product_img":"http://54.212.108.156:3000/api/uploads/resize-1613548631141238608collar.jpg","cat_name":"PET COLLARS & LEASHES","product_title":"DOGISTA PET PRODUCTS Dog Rope Leash,Brass","product_price":180,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e467ff62e8d2089fba973","product_img":"http://54.212.108.156:3000/api/uploads/1615955637906.jpeg","cat_name":"Cat Food","product_title":"Cat Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e46d8f62e8d2089fba974","product_img":"http://54.212.108.156:3000/api/uploads/1615955710860.jpeg","cat_name":"Cow food","product_title":"Cow food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e4734f62e8d2089fba975","product_img":"http://54.212.108.156:3000/api/uploads/1615955852371.jpeg","cat_name":"Bird Food","product_title":"Bird Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e478af62e8d2089fba976","product_img":"http://54.212.108.156:3000/api/uploads/Product \u2013 2.png","cat_name":"Cat Food","product_title":"Bellotta | Cat Food","product_price":2580,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0}]},"messages":[{"title":"Doctor","message":"Unable to find the doctor near your location can i show the doctor above the location"},{"title":"Product","message":"Unable to find the Product near your location can i show the doctor above the location"},{"title":"sercive","message":"Unable to find the Sercive near your location can i show the doctor above the location"}]}
+     * Data : {"SOS":[{"Number":9876543210},{"Number":9876543211},{"Number":9876543212},{"Number":9876543214}],"LocationDetails":[{"_id":"61439d5359f362793567cd15","user_id":"61439cdd59f362793567cd13","location_state":"Tamil Nadu","location_country":"India","location_city":"Chennai","location_pin":"600091","location_address":"171, Govindasamy Nagar 2nd St, Kuberan Nagar Extention, Puzhithivakkam, Madipakkam, Chennai, Tamil Nadu 600091, India","location_lat":12.961945606235595,"location_long":80.20251944661139,"location_title":"Home","location_nickname":"home","default_status":true,"date_and_time":"17-09-2021 01:08 am","mobile_type":"Android","delete_status":false,"updatedAt":"2021-09-16T19:38:59.558Z","createdAt":"2021-09-16T19:38:59.558Z","__v":0}],"PetDetails":[],"userdetails":{"_id":"61439cdd59f362793567cd13","first_name":"hari","last_name":"prashath","user_email":"hari@gmail.com","user_phone":"9710809161","date_of_reg":"17/09/2021 01:07 am","user_type":1,"ref_code":"","my_ref_code":"KCN2ZOS","user_status":"complete","otp":123456,"profile_img":"http://13.57.9.246:3000/api/uploads/1633689973295.jpeg","user_email_verification":false,"fb_token":"f6a41knbRfeYA3mJlaGLMk:APA91bEIs0aCBia8YyvnXYeccPhPwhVSxa8ijxIjBtNEugZLM1IjW0wk-ojlRJZdDuhn8RFDlY-2eX-9AOUWfj0XM9RMNKQeo7hbBbm-oHchaZm65yFSiV8QVATZBt7pnfEsqm0W1btB","device_id":"","device_type":"","mobile_type":"Android","delete_status":false,"updatedAt":"2021-10-25T22:18:36.349Z","createdAt":"2021-09-16T19:37:01.824Z","__v":0},"Dashboarddata":{"Banner_details":[{"_id":"602e3a1bf62e8d2089fba972","title":".","img_path":"http://13.57.9.246:3000/api/uploads/1631620612622.png"},{"_id":"6035074245c5f677b63c3a68","title":"","img_path":"http://13.57.9.246:3000/api/uploads/1637576117422.jpg"},{"_id":"6194b7dd4269125146df8df3","title":"test","img_path":"http://13.57.9.246:3000/api/uploads/banner_empty.jpg"},{"_id":"6194b7ef4269125146df8df4","title":"test11","img_path":"http://13.57.9.246:3000/api/uploads/1637136366860.jpg"},{"_id":"6194bf6d4269125146df8dfc","title":"offer","img_path":"http://13.57.9.246:3000/api/uploads/1637138274743.png"},{"_id":"619b6d12391d6641029e6ca0","title":"Special offer for today","img_path":"http://13.57.9.246:3000/api/uploads/1637575904191.jpg"}],"Doctor_details":[{"_id":"6141f5f9970912297dc72173","doctor_name":"Dilshan TM","doctor_img":"http://54.212.108.156:3000/api/uploads/1631713043402.jpg","thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631721158569.png","specialization":[{"specialization":"General Consultant"},{"specialization":"Dentist"},{"specialization":"Dermatologist"},{"specialization":"Neurologist"},{"specialization":"Pediatrician"},{"specialization":"Ophthalmologist"}],"distance":"270.07","clinic_name":"Lankan Clinic","fav":true,"star_count":5,"review_count":0},{"_id":"6142009745209c3833dac78f","doctor_name":"Vasu M","doctor_img":"http://54.212.108.156:3000/api/uploads/1631715639109.jpg","thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631721120948.jpeg","specialization":[{"specialization":"Dentist"},{"specialization":"Cardiologist"},{"specialization":"Nutrition"}],"distance":"270.07","clinic_name":"Vasu Clinic","fav":false,"star_count":5,"review_count":0},{"_id":"614202bd45209c3833dac793","doctor_name":"Kumar G","doctor_img":"http://54.212.108.156:3000/api/uploads/1631716163157.jpg","thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631721103833.png","specialization":[{"specialization":"Dentist"},{"specialization":"General Consultant"},{"specialization":"Dermatologist"},{"specialization":"Pediatrician"},{"specialization":"Ophthalmologist"},{"specialization":"Neurologist"},{"specialization":"Radiology"},{"specialization":"Oncologist"},{"specialization":"Nutrition"},{"specialization":"Cardiologist"},{"specialization":"Gynecologist"}],"distance":"270.07","clinic_name":"Kumar Clinic","fav":false,"star_count":5,"review_count":0}],"Service_details":[{"_id":"5fe185d61996f651f5133693","service_icon":"http://13.57.9.246:3000/api/uploads/1631688979304.jpeg","service_title":"COVID Tests","background_color":"#F9A826"},{"_id":"5ff7f5171c72093650a13a14","service_icon":"http://13.57.9.246:3000/api/uploads/1631624524247.png","service_title":"Blood Tests","background_color":"#FF7A7A"},{"_id":"602d1fc0562e0916bc9b3245","service_icon":"http://13.57.9.246:3000/api/uploads/1631624559968.png","service_title":"CT Scans","background_color":"#9BD152"},{"_id":"602d1fd0562e0916bc9b3247","service_icon":"http://13.57.9.246:3000/api/uploads/1631629900711.png","service_title":"X-Ray Scans","background_color":"#009377"},{"_id":"603dc7a01ef90c51d57cf775","service_icon":"http://13.57.9.246:3000/api/uploads/1631630066967.png","service_title":"MRI Scans","background_color":"#FF0000"},{"_id":"60d479f45035a966302a37a5","service_icon":"http://13.57.9.246:3000/api/uploads/1631630129897.png","service_title":"Ultrasound Scans","background_color":"#FF6F00"},{"_id":"619b7a6a391d6641029e6ca5","service_icon":"http://13.57.9.246:3000/api/uploads/1637579360972.jpg","service_title":"covid tests"}],"middle_Banner_details":[{"_id":"60c35c4ccfa6933a181985af","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1624371606468.jpg"},{"_id":"60c361cfaa96c5441495e076","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1624371765394.jpg"}],"Products_details":[{"_id":"60ae2c0c48ffef65a41bc546","product_img":"http://13.57.9.246:3000/api/uploads/1631634178755.png","cat_name":"Heathcare Devices","product_title":"Blood Glucometer","product_price":120,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634169345.png","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"60ae2d1f48ffef65a41bc547","product_img":"http://13.57.9.246:3000/api/uploads/1631634053234.png","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitor","product_price":150,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634066424.png","product_discount":10,"product_discount_price":0,"product_fav":true,"product_rating":5,"product_review":0},{"_id":"616026dd59f362793567cd50","product_img":"http://54.212.108.156:3000/api/uploads/1622197569345.jpeg","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitors","product_price":1000,"thumbnail_image":"","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0}],"Puppy_Products_details":[{"_id":"60ae2c0c48ffef65a41bc546","product_img":"http://13.57.9.246:3000/api/uploads/1631634178755.png","cat_name":"Heathcare Devices","product_title":"Blood Glucometer","product_price":120,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634169345.png","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"60ae2d1f48ffef65a41bc547","product_img":"http://13.57.9.246:3000/api/uploads/1631634053234.png","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitor","product_price":150,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634066424.png","product_discount":10,"product_discount_price":0,"product_fav":true,"product_rating":5,"product_review":0},{"_id":"616026dd59f362793567cd50","product_img":"http://54.212.108.156:3000/api/uploads/1622197569345.jpeg","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitors","product_price":1000,"thumbnail_image":"","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0}]},"messages":[{"title":"Doctor","message":"Unable to find the doctor near your location can i show the doctor above the location"},{"title":"Product","message":"Unable to find the Product near your location can i show the doctor above the location"},{"title":"sercive","message":"Unable to find the Sercive near your location can i show the doctor above the location"}],"paymentdetails":{"api_key":"rzp_live_PpSvd6YcsSkwhx","mode":"Live"}}
      * Code : 200
      */
 
@@ -15,11 +15,12 @@ public class PetLoverDashboardResponse{
     private String Message;
     /**
      * SOS : [{"Number":9876543210},{"Number":9876543211},{"Number":9876543212},{"Number":9876543214}]
-     * LocationDetails : [{"_id":"603e39522c2b43125f8cb809","user_id":"603e388f2c2b43125f8cb808","location_state":"TN","location_country":"India","location_city":"Chennai","location_pin":"600042","location_address":"5-38A, 2nd Main Rd, Ram Nagar, Karnam Street, Karunabigai Colony, Velachery, Chennai, Tamil Nadu 600042, India","location_lat":12.9832535692558,"location_long":80.22351376712322,"location_title":"Home","location_nickname":"park hotel","default_status":true,"date_and_time":"02-03-2021 06:40 PM","mobile_type":"IOS","delete_status":false,"updatedAt":"2021-03-02T13:10:42.571Z","createdAt":"2021-03-02T13:10:42.571Z","__v":0}]
-     * PetDetails : [{"pet_img":[{"pet_img":"http://54.212.108.156:3000/api/uploads/1614864579584.603e388f2c2b43125f8cb8080403185939"},{"pet_img":"http://54.212.108.156:3000/api/uploads/1614864587880.603e388f2c2b43125f8cb8080403185947"}],"_id":"6040dfcb2c2b43125f8cb8b5","user_id":"603e388f2c2b43125f8cb808","pet_name":"jimmy ","pet_type":"Dog","pet_breed":"Golden Retrieve","pet_gender":"Male","pet_color":"white","pet_weight":10.12,"pet_age":"0 years 2 months","pet_dob":"02-01-2021","pet_spayed":true,"pet_purebred":false,"pet_frnd_with_dog":true,"pet_frnd_with_cat":false,"pet_frnd_with_kit":true,"pet_microchipped":true,"pet_tick_free":false,"pet_private_part":false,"vaccinated":true,"last_vaccination_date":"04-02-2021","default_status":true,"date_and_time":"04-03-2021 06:59 PM","mobile_type":"IOS","delete_status":false,"updatedAt":"2021-03-04T13:29:49.575Z","createdAt":"2021-03-04T13:25:31.366Z","__v":0}]
-     * userdetails : {"_id":"603e388f2c2b43125f8cb808","first_name":"Sri","last_name":"ram","user_email":"","user_phone":"1222222221","date_of_reg":"02-03-2021 06:37 PM","user_type":1,"user_status":"complete","otp":123456,"profile_img":"","user_email_verification":false,"fb_token":"de5HE6dVrEixslsoO4vaZD:APA91bHCXR7pZPh_GotF8SfzlBB6r8o8Rrn39YMhDqYI7i3np0sR4zsSPB1Q3GZfEGS_0-Frl0et2vQjuSiXexTDfauEDRc7MA69nhhWbj-GmRmclzuPYQpAgwaVm-oe7KyzBDxCHHGa","device_id":"","device_type":"","mobile_type":"IOS","delete_status":false,"updatedAt":"2021-04-09T07:43:29.794Z","createdAt":"2021-03-02T13:07:27.079Z","__v":0}
-     * Dashboarddata : {"Banner_details":[{"_id":"602e3a1bf62e8d2089fba972","title":"Title 4","img_path":"http://54.212.108.156:3000/api/uploads/SS.jpg"},{"_id":"6035074245c5f677b63c3a68","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1614087999003.jpg"},{"_id":"6035075845c5f677b63c3a69","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1614088020969.jpg"},{"_id":"6035077545c5f677b63c3a6b","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1614088050207.jpg"}],"Doctor_details":[{"_id":"6040832b2c2b43125f8cb843","doctor_name":"Dr .Albert Doctor","doctor_img":"http://54.212.108.156:3000/api/uploads/1614840819938.jpg","specialization":[{"specialization":"Surgeon"},{"specialization":"Internal Medicine Physician"}],"distance":"0.00","clinic_name":"Care Medical Hospital","fav":true,"star_count":5,"review_count":22},{"_id":"6040a24a2c2b43125f8cb866","doctor_name":"Dr.paveen kumar Doctor","doctor_img":"http://54.212.108.156:3000/api/uploads/1614848727515.jpg","specialization":[{"specialization":"Surgeon"},{"specialization":"Internal Medicine Physician"}],"distance":"0.00","clinic_name":"Zen clinic","fav":true,"star_count":5,"review_count":22},{"_id":"603f3e382c2b43125f8cb817","doctor_name":"test","doctor_img":"http://54.212.108.156:3000/api/uploads/1614758959722.png","specialization":[{"specialization":"Family Physician"}],"distance":"310.40","clinic_name":"tre","fav":true,"star_count":5,"review_count":22},{"_id":"603e2a7b2c2b43125f8cb805","doctor_name":"DineshKumar Deva","doctor_img":"http://54.212.108.156:3000/api/uploads/1614688613605.jpeg","specialization":[{"specialization":"Surgeon"},{"specialization":"Internal Medicine Physician"},{"specialization":"Psychiatrist"},{"specialization":"Testing Spef"},{"specialization":"Dermatologist"}],"distance":"8948.52","clinic_name":"Apollo pharmacy","fav":true,"star_count":5,"review_count":22}],"Service_details":[{"_id":"5fe185d61996f651f5133693","service_icon":"http://54.212.108.156:3000/api/uploads/1617889303126.png","service_title":" Dog Walking","background_color":"#F9A826"},{"_id":"5ff7f5171c72093650a13a14","service_icon":"http://54.212.108.156:3000/api/uploads/1617889319529.png","service_title":" Dog Grooming","background_color":"#FF7A7A"},{"_id":"5ff815d4414b1052a09bb2b1","service_icon":"http://54.212.108.156:3000/api/uploads/1617889353269.png","service_title":" Dog Training","background_color":"#9BD152"},{"_id":"602d1fc0562e0916bc9b3245","service_icon":"http://54.212.108.156:3000/api/uploads/1617889386383.png","service_title":"Dog Obedience Training.","background_color":"#009377"},{"_id":"602d1fd0562e0916bc9b3247","service_icon":"http://54.212.108.156:3000/api/uploads/1617889386383.png","service_title":" Pet Sitting","background_color":"#FF0000"},{"_id":"603dc7a01ef90c51d57cf775","service_icon":"http://54.212.108.156:3000/api/uploads/1617889353269.png","service_title":"Hair Cutting","background_color":"#FF6F00"}],"middle_Banner_details":[{"_id":"1231231","title":"banner - 1","img_path":"http://mysalveo.com/api/uploads/images.jpeg"},{"_id":"1231231","title":"banner - 2","img_path":"http://mysalveo.com/api/uploads/images.jpeg"},{"_id":"1231231","title":"banner - 3","img_path":"http://mysalveo.com/api/uploads/images.jpeg"}],"Products_details":[{"_id":"602e11404775fa0735d7bf40","product_img":"http://54.212.108.156:3000/api/uploads/resize-1613548631141238608collar.jpg","cat_name":"PET COLLARS & LEASHES","product_title":"DOGISTA PET PRODUCTS Dog Rope Leash,Brass","product_price":180,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e467ff62e8d2089fba973","product_img":"http://54.212.108.156:3000/api/uploads/1615955637906.jpeg","cat_name":"Cat Food","product_title":"Cat Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e46d8f62e8d2089fba974","product_img":"http://54.212.108.156:3000/api/uploads/1615955710860.jpeg","cat_name":"Cow food","product_title":"Cow food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e4734f62e8d2089fba975","product_img":"http://54.212.108.156:3000/api/uploads/1615955852371.jpeg","cat_name":"Bird Food","product_title":"Bird Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e478af62e8d2089fba976","product_img":"http://54.212.108.156:3000/api/uploads/Product \u2013 2.png","cat_name":"Cat Food","product_title":"Bellotta | Cat Food","product_price":2580,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0}],"Puppy_Products_details":[{"_id":"602e11404775fa0735d7bf40","product_img":"http://54.212.108.156:3000/api/uploads/resize-1613548631141238608collar.jpg","cat_name":"PET COLLARS & LEASHES","product_title":"DOGISTA PET PRODUCTS Dog Rope Leash,Brass","product_price":180,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e467ff62e8d2089fba973","product_img":"http://54.212.108.156:3000/api/uploads/1615955637906.jpeg","cat_name":"Cat Food","product_title":"Cat Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e46d8f62e8d2089fba974","product_img":"http://54.212.108.156:3000/api/uploads/1615955710860.jpeg","cat_name":"Cow food","product_title":"Cow food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e4734f62e8d2089fba975","product_img":"http://54.212.108.156:3000/api/uploads/1615955852371.jpeg","cat_name":"Bird Food","product_title":"Bird Food","product_price":1000,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"602e478af62e8d2089fba976","product_img":"http://54.212.108.156:3000/api/uploads/Product \u2013 2.png","cat_name":"Cat Food","product_title":"Bellotta | Cat Food","product_price":2580,"product_discount":0,"product_fav":false,"product_rating":5,"product_review":0}]}
+     * LocationDetails : [{"_id":"61439d5359f362793567cd15","user_id":"61439cdd59f362793567cd13","location_state":"Tamil Nadu","location_country":"India","location_city":"Chennai","location_pin":"600091","location_address":"171, Govindasamy Nagar 2nd St, Kuberan Nagar Extention, Puzhithivakkam, Madipakkam, Chennai, Tamil Nadu 600091, India","location_lat":12.961945606235595,"location_long":80.20251944661139,"location_title":"Home","location_nickname":"home","default_status":true,"date_and_time":"17-09-2021 01:08 am","mobile_type":"Android","delete_status":false,"updatedAt":"2021-09-16T19:38:59.558Z","createdAt":"2021-09-16T19:38:59.558Z","__v":0}]
+     * PetDetails : []
+     * userdetails : {"_id":"61439cdd59f362793567cd13","first_name":"hari","last_name":"prashath","user_email":"hari@gmail.com","user_phone":"9710809161","date_of_reg":"17/09/2021 01:07 am","user_type":1,"ref_code":"","my_ref_code":"KCN2ZOS","user_status":"complete","otp":123456,"profile_img":"http://13.57.9.246:3000/api/uploads/1633689973295.jpeg","user_email_verification":false,"fb_token":"f6a41knbRfeYA3mJlaGLMk:APA91bEIs0aCBia8YyvnXYeccPhPwhVSxa8ijxIjBtNEugZLM1IjW0wk-ojlRJZdDuhn8RFDlY-2eX-9AOUWfj0XM9RMNKQeo7hbBbm-oHchaZm65yFSiV8QVATZBt7pnfEsqm0W1btB","device_id":"","device_type":"","mobile_type":"Android","delete_status":false,"updatedAt":"2021-10-25T22:18:36.349Z","createdAt":"2021-09-16T19:37:01.824Z","__v":0}
+     * Dashboarddata : {"Banner_details":[{"_id":"602e3a1bf62e8d2089fba972","title":".","img_path":"http://13.57.9.246:3000/api/uploads/1631620612622.png"},{"_id":"6035074245c5f677b63c3a68","title":"","img_path":"http://13.57.9.246:3000/api/uploads/1637576117422.jpg"},{"_id":"6194b7dd4269125146df8df3","title":"test","img_path":"http://13.57.9.246:3000/api/uploads/banner_empty.jpg"},{"_id":"6194b7ef4269125146df8df4","title":"test11","img_path":"http://13.57.9.246:3000/api/uploads/1637136366860.jpg"},{"_id":"6194bf6d4269125146df8dfc","title":"offer","img_path":"http://13.57.9.246:3000/api/uploads/1637138274743.png"},{"_id":"619b6d12391d6641029e6ca0","title":"Special offer for today","img_path":"http://13.57.9.246:3000/api/uploads/1637575904191.jpg"}],"Doctor_details":[{"_id":"6141f5f9970912297dc72173","doctor_name":"Dilshan TM","doctor_img":"http://54.212.108.156:3000/api/uploads/1631713043402.jpg","thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631721158569.png","specialization":[{"specialization":"General Consultant"},{"specialization":"Dentist"},{"specialization":"Dermatologist"},{"specialization":"Neurologist"},{"specialization":"Pediatrician"},{"specialization":"Ophthalmologist"}],"distance":"270.07","clinic_name":"Lankan Clinic","fav":true,"star_count":5,"review_count":0},{"_id":"6142009745209c3833dac78f","doctor_name":"Vasu M","doctor_img":"http://54.212.108.156:3000/api/uploads/1631715639109.jpg","thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631721120948.jpeg","specialization":[{"specialization":"Dentist"},{"specialization":"Cardiologist"},{"specialization":"Nutrition"}],"distance":"270.07","clinic_name":"Vasu Clinic","fav":false,"star_count":5,"review_count":0},{"_id":"614202bd45209c3833dac793","doctor_name":"Kumar G","doctor_img":"http://54.212.108.156:3000/api/uploads/1631716163157.jpg","thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631721103833.png","specialization":[{"specialization":"Dentist"},{"specialization":"General Consultant"},{"specialization":"Dermatologist"},{"specialization":"Pediatrician"},{"specialization":"Ophthalmologist"},{"specialization":"Neurologist"},{"specialization":"Radiology"},{"specialization":"Oncologist"},{"specialization":"Nutrition"},{"specialization":"Cardiologist"},{"specialization":"Gynecologist"}],"distance":"270.07","clinic_name":"Kumar Clinic","fav":false,"star_count":5,"review_count":0}],"Service_details":[{"_id":"5fe185d61996f651f5133693","service_icon":"http://13.57.9.246:3000/api/uploads/1631688979304.jpeg","service_title":"COVID Tests","background_color":"#F9A826"},{"_id":"5ff7f5171c72093650a13a14","service_icon":"http://13.57.9.246:3000/api/uploads/1631624524247.png","service_title":"Blood Tests","background_color":"#FF7A7A"},{"_id":"602d1fc0562e0916bc9b3245","service_icon":"http://13.57.9.246:3000/api/uploads/1631624559968.png","service_title":"CT Scans","background_color":"#9BD152"},{"_id":"602d1fd0562e0916bc9b3247","service_icon":"http://13.57.9.246:3000/api/uploads/1631629900711.png","service_title":"X-Ray Scans","background_color":"#009377"},{"_id":"603dc7a01ef90c51d57cf775","service_icon":"http://13.57.9.246:3000/api/uploads/1631630066967.png","service_title":"MRI Scans","background_color":"#FF0000"},{"_id":"60d479f45035a966302a37a5","service_icon":"http://13.57.9.246:3000/api/uploads/1631630129897.png","service_title":"Ultrasound Scans","background_color":"#FF6F00"},{"_id":"619b7a6a391d6641029e6ca5","service_icon":"http://13.57.9.246:3000/api/uploads/1637579360972.jpg","service_title":"covid tests"}],"middle_Banner_details":[{"_id":"60c35c4ccfa6933a181985af","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1624371606468.jpg"},{"_id":"60c361cfaa96c5441495e076","title":"","img_path":"http://54.212.108.156:3000/api/uploads/1624371765394.jpg"}],"Products_details":[{"_id":"60ae2c0c48ffef65a41bc546","product_img":"http://13.57.9.246:3000/api/uploads/1631634178755.png","cat_name":"Heathcare Devices","product_title":"Blood Glucometer","product_price":120,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634169345.png","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"60ae2d1f48ffef65a41bc547","product_img":"http://13.57.9.246:3000/api/uploads/1631634053234.png","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitor","product_price":150,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634066424.png","product_discount":10,"product_discount_price":0,"product_fav":true,"product_rating":5,"product_review":0},{"_id":"616026dd59f362793567cd50","product_img":"http://54.212.108.156:3000/api/uploads/1622197569345.jpeg","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitors","product_price":1000,"thumbnail_image":"","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0}],"Puppy_Products_details":[{"_id":"60ae2c0c48ffef65a41bc546","product_img":"http://13.57.9.246:3000/api/uploads/1631634178755.png","cat_name":"Heathcare Devices","product_title":"Blood Glucometer","product_price":120,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634169345.png","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0},{"_id":"60ae2d1f48ffef65a41bc547","product_img":"http://13.57.9.246:3000/api/uploads/1631634053234.png","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitor","product_price":150,"thumbnail_image":"http://13.57.9.246:3000/api/uploads/1631634066424.png","product_discount":10,"product_discount_price":0,"product_fav":true,"product_rating":5,"product_review":0},{"_id":"616026dd59f362793567cd50","product_img":"http://54.212.108.156:3000/api/uploads/1622197569345.jpeg","cat_name":"Heathcare Devices","product_title":"Blood Pressure Monitors","product_price":1000,"thumbnail_image":"","product_discount":10,"product_discount_price":0,"product_fav":false,"product_rating":5,"product_review":0}]}
      * messages : [{"title":"Doctor","message":"Unable to find the doctor near your location can i show the doctor above the location"},{"title":"Product","message":"Unable to find the Product near your location can i show the doctor above the location"},{"title":"sercive","message":"Unable to find the Sercive near your location can i show the doctor above the location"}]
+     * paymentdetails : {"api_key":"rzp_live_PpSvd6YcsSkwhx","mode":"Live"}
      */
 
     private DataBean Data;
@@ -59,88 +60,65 @@ public class PetLoverDashboardResponse{
 
     public static class DataBean {
         /**
-         * _id : 603e388f2c2b43125f8cb808
-         * first_name : Sri
-         * last_name : ram
-         * user_email :
-         * user_phone : 1222222221
-         * date_of_reg : 02-03-2021 06:37 PM
+         * _id : 61439cdd59f362793567cd13
+         * first_name : hari
+         * last_name : prashath
+         * user_email : hari@gmail.com
+         * user_phone : 9710809161
+         * date_of_reg : 17/09/2021 01:07 am
          * user_type : 1
+         * ref_code :
+         * my_ref_code : KCN2ZOS
          * user_status : complete
          * otp : 123456
-         * profile_img :
+         * profile_img : http://13.57.9.246:3000/api/uploads/1633689973295.jpeg
          * user_email_verification : false
-         * fb_token : de5HE6dVrEixslsoO4vaZD:APA91bHCXR7pZPh_GotF8SfzlBB6r8o8Rrn39YMhDqYI7i3np0sR4zsSPB1Q3GZfEGS_0-Frl0et2vQjuSiXexTDfauEDRc7MA69nhhWbj-GmRmclzuPYQpAgwaVm-oe7KyzBDxCHHGa
+         * fb_token : f6a41knbRfeYA3mJlaGLMk:APA91bEIs0aCBia8YyvnXYeccPhPwhVSxa8ijxIjBtNEugZLM1IjW0wk-ojlRJZdDuhn8RFDlY-2eX-9AOUWfj0XM9RMNKQeo7hbBbm-oHchaZm65yFSiV8QVATZBt7pnfEsqm0W1btB
          * device_id :
          * device_type :
-         * mobile_type : IOS
+         * mobile_type : Android
          * delete_status : false
-         * updatedAt : 2021-04-09T07:43:29.794Z
-         * createdAt : 2021-03-02T13:07:27.079Z
+         * updatedAt : 2021-10-25T22:18:36.349Z
+         * createdAt : 2021-09-16T19:37:01.824Z
          * __v : 0
          */
 
         private UserdetailsBean userdetails;
         private DashboarddataBean Dashboarddata;
         /**
+         * api_key : rzp_live_PpSvd6YcsSkwhx
+         * mode : Live
+         */
+
+        private PaymentdetailsBean paymentdetails;
+        /**
          * Number : 9876543210
          */
 
         private List<SOSBean> SOS;
         /**
-         * _id : 603e39522c2b43125f8cb809
-         * user_id : 603e388f2c2b43125f8cb808
-         * location_state : TN
+         * _id : 61439d5359f362793567cd15
+         * user_id : 61439cdd59f362793567cd13
+         * location_state : Tamil Nadu
          * location_country : India
          * location_city : Chennai
-         * location_pin : 600042
-         * location_address : 5-38A, 2nd Main Rd, Ram Nagar, Karnam Street, Karunabigai Colony, Velachery, Chennai, Tamil Nadu 600042, India
-         * location_lat : 12.9832535692558
-         * location_long : 80.22351376712322
+         * location_pin : 600091
+         * location_address : 171, Govindasamy Nagar 2nd St, Kuberan Nagar Extention, Puzhithivakkam, Madipakkam, Chennai, Tamil Nadu 600091, India
+         * location_lat : 12.961945606235595
+         * location_long : 80.20251944661139
          * location_title : Home
-         * location_nickname : park hotel
+         * location_nickname : home
          * default_status : true
-         * date_and_time : 02-03-2021 06:40 PM
-         * mobile_type : IOS
+         * date_and_time : 17-09-2021 01:08 am
+         * mobile_type : Android
          * delete_status : false
-         * updatedAt : 2021-03-02T13:10:42.571Z
-         * createdAt : 2021-03-02T13:10:42.571Z
+         * updatedAt : 2021-09-16T19:38:59.558Z
+         * createdAt : 2021-09-16T19:38:59.558Z
          * __v : 0
          */
 
         private List<LocationDetailsBean> LocationDetails;
-        /**
-         * pet_img : [{"pet_img":"http://54.212.108.156:3000/api/uploads/1614864579584.603e388f2c2b43125f8cb8080403185939"},{"pet_img":"http://54.212.108.156:3000/api/uploads/1614864587880.603e388f2c2b43125f8cb8080403185947"}]
-         * _id : 6040dfcb2c2b43125f8cb8b5
-         * user_id : 603e388f2c2b43125f8cb808
-         * pet_name : jimmy
-         * pet_type : Dog
-         * pet_breed : Golden Retrieve
-         * pet_gender : Male
-         * pet_color : white
-         * pet_weight : 10.12
-         * pet_age : 0 years 2 months
-         * pet_dob : 02-01-2021
-         * pet_spayed : true
-         * pet_purebred : false
-         * pet_frnd_with_dog : true
-         * pet_frnd_with_cat : false
-         * pet_frnd_with_kit : true
-         * pet_microchipped : true
-         * pet_tick_free : false
-         * pet_private_part : false
-         * vaccinated : true
-         * last_vaccination_date : 04-02-2021
-         * default_status : true
-         * date_and_time : 04-03-2021 06:59 PM
-         * mobile_type : IOS
-         * delete_status : false
-         * updatedAt : 2021-03-04T13:29:49.575Z
-         * createdAt : 2021-03-04T13:25:31.366Z
-         * __v : 0
-         */
-
-        private List<PetDetailsBean> PetDetails;
+        private List<?> PetDetails;
         /**
          * title : Doctor
          * message : Unable to find the doctor near your location can i show the doctor above the location
@@ -164,6 +142,14 @@ public class PetLoverDashboardResponse{
             this.Dashboarddata = Dashboarddata;
         }
 
+        public PaymentdetailsBean getPaymentdetails() {
+            return paymentdetails;
+        }
+
+        public void setPaymentdetails(PaymentdetailsBean paymentdetails) {
+            this.paymentdetails = paymentdetails;
+        }
+
         public List<SOSBean> getSOS() {
             return SOS;
         }
@@ -180,11 +166,11 @@ public class PetLoverDashboardResponse{
             this.LocationDetails = LocationDetails;
         }
 
-        public List<PetDetailsBean> getPetDetails() {
+        public List<?> getPetDetails() {
             return PetDetails;
         }
 
-        public void setPetDetails(List<PetDetailsBean> PetDetails) {
+        public void setPetDetails(List<?> PetDetails) {
             this.PetDetails = PetDetails;
         }
 
@@ -204,6 +190,8 @@ public class PetLoverDashboardResponse{
             private String user_phone;
             private String date_of_reg;
             private int user_type;
+            private String ref_code;
+            private String my_ref_code;
             private String user_status;
             private int otp;
             private String profile_img;
@@ -271,6 +259,22 @@ public class PetLoverDashboardResponse{
 
             public void setUser_type(int user_type) {
                 this.user_type = user_type;
+            }
+
+            public String getRef_code() {
+                return ref_code;
+            }
+
+            public void setRef_code(String ref_code) {
+                this.ref_code = ref_code;
+            }
+
+            public String getMy_ref_code() {
+                return my_ref_code;
+            }
+
+            public void setMy_ref_code(String my_ref_code) {
+                this.my_ref_code = my_ref_code;
             }
 
             public String getUser_status() {
@@ -373,46 +377,49 @@ public class PetLoverDashboardResponse{
         public static class DashboarddataBean {
             /**
              * _id : 602e3a1bf62e8d2089fba972
-             * title : Title 4
-             * img_path : http://54.212.108.156:3000/api/uploads/SS.jpg
+             * title : .
+             * img_path : http://13.57.9.246:3000/api/uploads/1631620612622.png
              */
 
             private List<BannerDetailsBean> Banner_details;
             /**
-             * _id : 6040832b2c2b43125f8cb843
-             * doctor_name : Dr .Albert Doctor
-             * doctor_img : http://54.212.108.156:3000/api/uploads/1614840819938.jpg
-             * specialization : [{"specialization":"Surgeon"},{"specialization":"Internal Medicine Physician"}]
-             * distance : 0.00
-             * clinic_name : Care Medical Hospital
+             * _id : 6141f5f9970912297dc72173
+             * doctor_name : Dilshan TM
+             * doctor_img : http://54.212.108.156:3000/api/uploads/1631713043402.jpg
+             * thumbnail_image : http://13.57.9.246:3000/api/uploads/1631721158569.png
+             * specialization : [{"specialization":"General Consultant"},{"specialization":"Dentist"},{"specialization":"Dermatologist"},{"specialization":"Neurologist"},{"specialization":"Pediatrician"},{"specialization":"Ophthalmologist"}]
+             * distance : 270.07
+             * clinic_name : Lankan Clinic
              * fav : true
              * star_count : 5
-             * review_count : 22
+             * review_count : 0
              */
 
             private List<DoctorDetailsBean> Doctor_details;
             /**
              * _id : 5fe185d61996f651f5133693
-             * service_icon : http://54.212.108.156:3000/api/uploads/1617889303126.png
-             * service_title :  Dog Walking
+             * service_icon : http://13.57.9.246:3000/api/uploads/1631688979304.jpeg
+             * service_title : COVID Tests
              * background_color : #F9A826
              */
 
             private List<ServiceDetailsBean> Service_details;
             /**
-             * _id : 1231231
-             * title : banner - 1
-             * img_path : http://mysalveo.com/api/uploads/images.jpeg
+             * _id : 60c35c4ccfa6933a181985af
+             * title :
+             * img_path : http://54.212.108.156:3000/api/uploads/1624371606468.jpg
              */
 
             private List<MiddleBannerDetailsBean> middle_Banner_details;
             /**
-             * _id : 602e11404775fa0735d7bf40
-             * product_img : http://54.212.108.156:3000/api/uploads/resize-1613548631141238608collar.jpg
-             * cat_name : PET COLLARS & LEASHES
-             * product_title : DOGISTA PET PRODUCTS Dog Rope Leash,Brass
-             * product_price : 180
-             * product_discount : 0
+             * _id : 60ae2c0c48ffef65a41bc546
+             * product_img : http://13.57.9.246:3000/api/uploads/1631634178755.png
+             * cat_name : Heathcare Devices
+             * product_title : Blood Glucometer
+             * product_price : 120
+             * thumbnail_image : http://13.57.9.246:3000/api/uploads/1631634169345.png
+             * product_discount : 10
+             * product_discount_price : 0
              * product_fav : false
              * product_rating : 5
              * product_review : 0
@@ -420,12 +427,14 @@ public class PetLoverDashboardResponse{
 
             private List<ProductsDetailsBean> Products_details;
             /**
-             * _id : 602e11404775fa0735d7bf40
-             * product_img : http://54.212.108.156:3000/api/uploads/resize-1613548631141238608collar.jpg
-             * cat_name : PET COLLARS & LEASHES
-             * product_title : DOGISTA PET PRODUCTS Dog Rope Leash,Brass
-             * product_price : 180
-             * product_discount : 0
+             * _id : 60ae2c0c48ffef65a41bc546
+             * product_img : http://13.57.9.246:3000/api/uploads/1631634178755.png
+             * cat_name : Heathcare Devices
+             * product_title : Blood Glucometer
+             * product_price : 120
+             * thumbnail_image : http://13.57.9.246:3000/api/uploads/1631634169345.png
+             * product_discount : 10
+             * product_discount_price : 0
              * product_fav : false
              * product_rating : 5
              * product_review : 0
@@ -519,10 +528,10 @@ public class PetLoverDashboardResponse{
                 private String distance;
                 private String clinic_name;
                 private boolean fav;
-                private double star_count;
+                private int star_count;
                 private int review_count;
                 /**
-                 * specialization : Surgeon
+                 * specialization : General Consultant
                  */
 
                 private List<SpecializationBean> specialization;
@@ -583,11 +592,11 @@ public class PetLoverDashboardResponse{
                     this.fav = fav;
                 }
 
-                public double getStar_count() {
+                public int getStar_count() {
                     return star_count;
                 }
 
-                public void setStar_count(double star_count) {
+                public void setStar_count(int star_count) {
                     this.star_count = star_count;
                 }
 
@@ -695,19 +704,12 @@ public class PetLoverDashboardResponse{
                 private String cat_name;
                 private String product_title;
                 private int product_price;
-                private int product_discount;
-                private boolean product_fav;
-                private double product_rating;
-                private int product_review;
-
                 private String thumbnail_image;
-                public String getThumbnail_image() {
-                    return thumbnail_image;
-                }
-
-                public void setThumbnail_image(String thumbnail_image) {
-                    this.thumbnail_image = thumbnail_image;
-                }
+                private int product_discount;
+                private int product_discount_price;
+                private boolean product_fav;
+                private int product_rating;
+                private int product_review;
 
                 public String get_id() {
                     return _id;
@@ -749,12 +751,28 @@ public class PetLoverDashboardResponse{
                     this.product_price = product_price;
                 }
 
+                public String getThumbnail_image() {
+                    return thumbnail_image;
+                }
+
+                public void setThumbnail_image(String thumbnail_image) {
+                    this.thumbnail_image = thumbnail_image;
+                }
+
                 public int getProduct_discount() {
                     return product_discount;
                 }
 
                 public void setProduct_discount(int product_discount) {
                     this.product_discount = product_discount;
+                }
+
+                public int getProduct_discount_price() {
+                    return product_discount_price;
+                }
+
+                public void setProduct_discount_price(int product_discount_price) {
+                    this.product_discount_price = product_discount_price;
                 }
 
                 public boolean isProduct_fav() {
@@ -765,11 +783,11 @@ public class PetLoverDashboardResponse{
                     this.product_fav = product_fav;
                 }
 
-                public double getProduct_rating() {
+                public int getProduct_rating() {
                     return product_rating;
                 }
 
-                public void setProduct_rating(double product_rating) {
+                public void setProduct_rating(int product_rating) {
                     this.product_rating = product_rating;
                 }
 
@@ -788,9 +806,11 @@ public class PetLoverDashboardResponse{
                 private String cat_name;
                 private String product_title;
                 private int product_price;
+                private String thumbnail_image;
                 private int product_discount;
+                private int product_discount_price;
                 private boolean product_fav;
-                private double product_rating;
+                private int product_rating;
                 private int product_review;
 
                 public String get_id() {
@@ -833,12 +853,28 @@ public class PetLoverDashboardResponse{
                     this.product_price = product_price;
                 }
 
+                public String getThumbnail_image() {
+                    return thumbnail_image;
+                }
+
+                public void setThumbnail_image(String thumbnail_image) {
+                    this.thumbnail_image = thumbnail_image;
+                }
+
                 public int getProduct_discount() {
                     return product_discount;
                 }
 
                 public void setProduct_discount(int product_discount) {
                     this.product_discount = product_discount;
+                }
+
+                public int getProduct_discount_price() {
+                    return product_discount_price;
+                }
+
+                public void setProduct_discount_price(int product_discount_price) {
+                    this.product_discount_price = product_discount_price;
                 }
 
                 public boolean isProduct_fav() {
@@ -849,11 +885,11 @@ public class PetLoverDashboardResponse{
                     this.product_fav = product_fav;
                 }
 
-                public double getProduct_rating() {
+                public int getProduct_rating() {
                     return product_rating;
                 }
 
-                public void setProduct_rating(double product_rating) {
+                public void setProduct_rating(int product_rating) {
                     this.product_rating = product_rating;
                 }
 
@@ -864,6 +900,27 @@ public class PetLoverDashboardResponse{
                 public void setProduct_review(int product_review) {
                     this.product_review = product_review;
                 }
+            }
+        }
+
+        public static class PaymentdetailsBean {
+            private String api_key;
+            private String mode;
+
+            public String getApi_key() {
+                return api_key;
+            }
+
+            public void setApi_key(String api_key) {
+                this.api_key = api_key;
+            }
+
+            public String getMode() {
+                return mode;
+            }
+
+            public void setMode(String mode) {
+                this.mode = mode;
             }
         }
 
@@ -1041,277 +1098,6 @@ public class PetLoverDashboardResponse{
 
             public void set__v(int __v) {
                 this.__v = __v;
-            }
-        }
-
-        public static class PetDetailsBean {
-            private String _id;
-            private String user_id;
-            private String pet_name;
-            private String pet_type;
-            private String pet_breed;
-            private String pet_gender;
-            private String pet_color;
-            private double pet_weight;
-            private String pet_age;
-            private String pet_dob;
-            private boolean pet_spayed;
-            private boolean pet_purebred;
-            private boolean pet_frnd_with_dog;
-            private boolean pet_frnd_with_cat;
-            private boolean pet_frnd_with_kit;
-            private boolean pet_microchipped;
-            private boolean pet_tick_free;
-            private boolean pet_private_part;
-            private boolean vaccinated;
-            private String last_vaccination_date;
-            private boolean default_status;
-            private String date_and_time;
-            private String mobile_type;
-            private boolean delete_status;
-            private String updatedAt;
-            private String createdAt;
-            private int __v;
-            /**
-             * pet_img : http://54.212.108.156:3000/api/uploads/1614864579584.603e388f2c2b43125f8cb8080403185939
-             */
-
-            private List<PetImgBean> pet_img;
-
-            public String get_id() {
-                return _id;
-            }
-
-            public void set_id(String _id) {
-                this._id = _id;
-            }
-
-            public String getUser_id() {
-                return user_id;
-            }
-
-            public void setUser_id(String user_id) {
-                this.user_id = user_id;
-            }
-
-            public String getPet_name() {
-                return pet_name;
-            }
-
-            public void setPet_name(String pet_name) {
-                this.pet_name = pet_name;
-            }
-
-            public String getPet_type() {
-                return pet_type;
-            }
-
-            public void setPet_type(String pet_type) {
-                this.pet_type = pet_type;
-            }
-
-            public String getPet_breed() {
-                return pet_breed;
-            }
-
-            public void setPet_breed(String pet_breed) {
-                this.pet_breed = pet_breed;
-            }
-
-            public String getPet_gender() {
-                return pet_gender;
-            }
-
-            public void setPet_gender(String pet_gender) {
-                this.pet_gender = pet_gender;
-            }
-
-            public String getPet_color() {
-                return pet_color;
-            }
-
-            public void setPet_color(String pet_color) {
-                this.pet_color = pet_color;
-            }
-
-            public double getPet_weight() {
-                return pet_weight;
-            }
-
-            public void setPet_weight(double pet_weight) {
-                this.pet_weight = pet_weight;
-            }
-
-            public String getPet_age() {
-                return pet_age;
-            }
-
-            public void setPet_age(String pet_age) {
-                this.pet_age = pet_age;
-            }
-
-            public String getPet_dob() {
-                return pet_dob;
-            }
-
-            public void setPet_dob(String pet_dob) {
-                this.pet_dob = pet_dob;
-            }
-
-            public boolean isPet_spayed() {
-                return pet_spayed;
-            }
-
-            public void setPet_spayed(boolean pet_spayed) {
-                this.pet_spayed = pet_spayed;
-            }
-
-            public boolean isPet_purebred() {
-                return pet_purebred;
-            }
-
-            public void setPet_purebred(boolean pet_purebred) {
-                this.pet_purebred = pet_purebred;
-            }
-
-            public boolean isPet_frnd_with_dog() {
-                return pet_frnd_with_dog;
-            }
-
-            public void setPet_frnd_with_dog(boolean pet_frnd_with_dog) {
-                this.pet_frnd_with_dog = pet_frnd_with_dog;
-            }
-
-            public boolean isPet_frnd_with_cat() {
-                return pet_frnd_with_cat;
-            }
-
-            public void setPet_frnd_with_cat(boolean pet_frnd_with_cat) {
-                this.pet_frnd_with_cat = pet_frnd_with_cat;
-            }
-
-            public boolean isPet_frnd_with_kit() {
-                return pet_frnd_with_kit;
-            }
-
-            public void setPet_frnd_with_kit(boolean pet_frnd_with_kit) {
-                this.pet_frnd_with_kit = pet_frnd_with_kit;
-            }
-
-            public boolean isPet_microchipped() {
-                return pet_microchipped;
-            }
-
-            public void setPet_microchipped(boolean pet_microchipped) {
-                this.pet_microchipped = pet_microchipped;
-            }
-
-            public boolean isPet_tick_free() {
-                return pet_tick_free;
-            }
-
-            public void setPet_tick_free(boolean pet_tick_free) {
-                this.pet_tick_free = pet_tick_free;
-            }
-
-            public boolean isPet_private_part() {
-                return pet_private_part;
-            }
-
-            public void setPet_private_part(boolean pet_private_part) {
-                this.pet_private_part = pet_private_part;
-            }
-
-            public boolean isVaccinated() {
-                return vaccinated;
-            }
-
-            public void setVaccinated(boolean vaccinated) {
-                this.vaccinated = vaccinated;
-            }
-
-            public String getLast_vaccination_date() {
-                return last_vaccination_date;
-            }
-
-            public void setLast_vaccination_date(String last_vaccination_date) {
-                this.last_vaccination_date = last_vaccination_date;
-            }
-
-            public boolean isDefault_status() {
-                return default_status;
-            }
-
-            public void setDefault_status(boolean default_status) {
-                this.default_status = default_status;
-            }
-
-            public String getDate_and_time() {
-                return date_and_time;
-            }
-
-            public void setDate_and_time(String date_and_time) {
-                this.date_and_time = date_and_time;
-            }
-
-            public String getMobile_type() {
-                return mobile_type;
-            }
-
-            public void setMobile_type(String mobile_type) {
-                this.mobile_type = mobile_type;
-            }
-
-            public boolean isDelete_status() {
-                return delete_status;
-            }
-
-            public void setDelete_status(boolean delete_status) {
-                this.delete_status = delete_status;
-            }
-
-            public String getUpdatedAt() {
-                return updatedAt;
-            }
-
-            public void setUpdatedAt(String updatedAt) {
-                this.updatedAt = updatedAt;
-            }
-
-            public String getCreatedAt() {
-                return createdAt;
-            }
-
-            public void setCreatedAt(String createdAt) {
-                this.createdAt = createdAt;
-            }
-
-            public int get__v() {
-                return __v;
-            }
-
-            public void set__v(int __v) {
-                this.__v = __v;
-            }
-
-            public List<PetImgBean> getPet_img() {
-                return pet_img;
-            }
-
-            public void setPet_img(List<PetImgBean> pet_img) {
-                this.pet_img = pet_img;
-            }
-
-            public static class PetImgBean {
-                private String pet_img;
-
-                public String getPet_img() {
-                    return pet_img;
-                }
-
-                public void setPet_img(String pet_img) {
-                    this.pet_img = pet_img;
-                }
             }
         }
 

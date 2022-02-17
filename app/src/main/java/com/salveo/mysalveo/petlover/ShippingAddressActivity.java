@@ -160,6 +160,7 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
     private int prodcut_count;
 
     private int prodcut_item_count;
+    private SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -186,9 +187,9 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
         img_sos.setVisibility(View.GONE);
         img_cart.setVisibility(View.GONE);
 
-        SessionManager session = new SessionManager(getApplicationContext());
+        sessionManager = new SessionManager(getApplicationContext());
 
-        HashMap<String, String> user = session.getProfileDetails();
+        HashMap<String, String> user = sessionManager.getProfileDetails();
 
         userid = user.get(SessionManager.KEY_ID);
 
@@ -788,6 +789,11 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
         final Activity activity = this;
 
         final Checkout co = new Checkout();
+        HashMap<String, String> sessionRazorpayDetails = sessionManager.getRazorpayDetails();
+        String rzpayapikey = sessionRazorpayDetails.get(SessionManager.KEY_RAZORPAY_APIKEY);
+        Log.w(TAG,"startPayment rzpayapikey : " + rzpayapikey);
+        // set your id as below
+        co.setKeyID(rzpayapikey);
 
         //totalamount = amount;
 

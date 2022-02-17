@@ -35,6 +35,10 @@ public class SessionManager {
     public static final String KEEPLOGIN = "keeplogin";
     public static final String KEEPPROFILEUPDATE = "keepprofileupdate";
 
+    public static final String KEY_RAZORPAY_APIKEY = "apikey";
+    public static final String KEY_RAZORPAY_PRODUCTION = "production";
+
+
 
 
 
@@ -111,6 +115,23 @@ public class SessionManager {
     public void setIsProfileUpdate(boolean isProfileUpdate){
         editor.putBoolean(KEEPPROFILEUPDATE,isProfileUpdate);
         editor.apply();
+    }
+
+    public void createRazorpayDetails(String apikey,String production) {
+        editor.putBoolean(IS_LOGIN, true);
+        editor.putString(KEY_RAZORPAY_APIKEY, apikey);
+        editor.putString(KEY_RAZORPAY_PRODUCTION, production);
+
+        Log.e(TAG, "................................>> session createRazorpayDetails " + "apikey" + apikey+" production " + production);
+
+        editor.commit();
+
+    }
+    public HashMap<String, String> getRazorpayDetails() {
+        HashMap<String, String> user = new HashMap<>();
+        user.put(KEY_RAZORPAY_APIKEY, pref.getString(KEY_RAZORPAY_APIKEY, ""));
+        user.put(KEY_RAZORPAY_PRODUCTION, pref.getString(KEY_RAZORPAY_PRODUCTION, ""));
+        return user;
     }
 
 
