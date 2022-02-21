@@ -212,6 +212,8 @@ public class PetHomeNewFragment extends Fragment implements Serializable,
 
     private Activity mActivity;
     private SessionManager sessionManager;
+    
+    public static String percentage = "";
 
 
     public PetHomeNewFragment() {
@@ -479,6 +481,9 @@ public class PetHomeNewFragment extends Fragment implements Serializable,
                         }
 
                         if(response.body().getData().getPaymentdetails() != null){
+                            if(response.body().getData().getPaymentdetails().getPercentage() != null){
+                                percentage = response.body().getData().getPaymentdetails().getPercentage();
+                            }
                             sessionManager.createRazorpayDetails(response.body().getData().getPaymentdetails().getApi_key(),response.body().getData().getPaymentdetails().getMode());
                         }
 

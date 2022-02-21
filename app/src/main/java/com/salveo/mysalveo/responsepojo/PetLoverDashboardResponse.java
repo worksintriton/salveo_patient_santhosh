@@ -906,6 +906,15 @@ public class PetLoverDashboardResponse{
         public static class PaymentdetailsBean {
             private String api_key;
             private String mode;
+            private String percentage;
+
+            public String getPercentage() {
+                return percentage;
+            }
+
+            public void setPercentage(String percentage) {
+                this.percentage = percentage;
+            }
 
             public String getApi_key() {
                 return api_key;

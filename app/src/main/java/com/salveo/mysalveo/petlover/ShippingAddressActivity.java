@@ -26,6 +26,7 @@ import com.salveo.mysalveo.api.APIClient;
 import com.salveo.mysalveo.api.RestApiInterface;
 import com.salveo.mysalveo.doctor.DoctorDashboardActivity;
 import com.salveo.mysalveo.doctor.shop.DoctorCartActivity;
+import com.salveo.mysalveo.fragmentpetlover.bottommenu.PetHomeNewFragment;
 import com.salveo.mysalveo.requestpojo.ShippingAddressDeleteRequest;
 import com.salveo.mysalveo.requestpojo.ShippingAddressFetchByUserIDRequest;
 import com.salveo.mysalveo.responsepojo.CartDetailsResponse;
@@ -800,17 +801,27 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
       /*  Double d = new Double(amount);
         int amout = d.intValue();*/
 
+        int totalamout = grand_total*100;
+        Log.w(TAG,"totalamout : "+totalamout);
+        double percentage = 0;
+        double percentageamount = 0;
 
-        Integer totalamout = grand_total*100;
+        try{
+            percentage = Double.parseDouble(PetHomeNewFragment.percentage);
+            Log.w(TAG,"percentage : "+percentage);
+            percentageamount = (totalamout*(percentage/100));
+            Log.w(TAG,"percentageamount : "+percentageamount);
+        }catch(NumberFormatException ignored){
+        }
 
         try {
             JSONObject options = new JSONObject();
-          options.put("name", "Salveo Health Care LLP");
+            options.put("name", "Salveo Health Care LLP");
             options.put("description", userid);
             //You can omit the image option to fetch the image from dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
-            options.put("amount", totalamout);
+            options.put("amount", percentageamount);
 
 
             co.open(activity, options);
