@@ -155,7 +155,7 @@ public class PetLoverShopNewAdapter extends  RecyclerView.Adapter<RecyclerView.V
     }
 
     class ViewHolderOne extends RecyclerView.ViewHolder {
-        public TextView txt_products_title,txt_category_title,txt_products_price;
+        public TextView txt_products_title,txt_category_title,txt_products_price,txt_product_discount_price,txt_products_offer;
         public ImageView img_products_image,img_fav;
         public ImageView hand_img1,hand_img2,hand_img3,hand_img4,hand_img5;
         public LinearLayout ll_root;
@@ -178,6 +178,10 @@ public class PetLoverShopNewAdapter extends  RecyclerView.Adapter<RecyclerView.V
             hand_img3 = itemView.findViewById(R.id.hand_img3);
             hand_img4 = itemView.findViewById(R.id.hand_img4);
             hand_img5 = itemView.findViewById(R.id.hand_img5);
+            txt_product_discount_price = itemView.findViewById(R.id.txt_product_discount_price);
+            txt_products_offer = itemView.findViewById(R.id.txt_products_offer);
+            txt_product_discount_price.setVisibility(View.GONE);
+            txt_products_offer.setVisibility(View.GONE);
 
 
 

@@ -8,6 +8,7 @@
         <entry key="..\:/TritonAppsGIt/salveo_patient_santhosh/app/src/main/res/layout/activity_product_details.xml" value="0.12360688956433637" />
         <entry key="..\:/TritonAppsGIt/salveo_patient_santhosh/app/src/main/res/layout/activity_shipping_address.xml" value="0.15307971014492755" />
         <entry key="..\:/TritonAppsGIt/salveo_patient_santhosh/app/src/main/res/layout/activity_sp_filters.xml" value="0.12360688956433637" />
+        <entry key="..\:/TritonAppsGit/salveo_patient_santhosh/app/src/main/res/layout/adapter_shop_card.xml" value="0.15534420289855072" />
         <entry key="..\:/Workspace/Petfolio_clone_salveo_patient/app/src/main/res/drawable/dashed_border.xml" value="0.2911458333333333" />
         <entry key="..\:/Workspace/Petfolio_clone_salveo_patient/app/src/main/res/drawable/horizontal_dotted_line_green.xml" value="0.2640625" />
         <entry key="..\:/Workspace/Petfolio_clone_salveo_patient/app/src/main/res/drawable/ic_home_updated.xml" value="0.2640625" />
@@ -55,7 +56,7 @@
       <item index="0" class="java.lang.String" itemvalue="android.annotation.SuppressLint" />
     </list>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

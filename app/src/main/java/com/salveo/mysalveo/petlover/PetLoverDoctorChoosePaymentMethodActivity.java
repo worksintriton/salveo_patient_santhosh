@@ -27,6 +27,7 @@ import com.google.gson.Gson;
 import com.salveo.mysalveo.R;
 import com.salveo.mysalveo.api.APIClient;
 import com.salveo.mysalveo.api.RestApiInterface;
+import com.salveo.mysalveo.fragmentpetlover.bottommenu.PetHomeNewFragment;
 import com.salveo.mysalveo.requestpojo.CouponCodeCheckRequest;
 import com.salveo.mysalveo.requestpojo.NotificationSendRequest;
 import com.salveo.mysalveo.requestpojo.PetAppointmentCreateRequest;
@@ -559,6 +560,7 @@ public class PetLoverDoctorChoosePaymentMethodActivity extends AppCompatActivity
         return couponCodeCheckRequest;
     }
 
+    @SuppressLint({"LongLogTag", "LogNotTimber"})
     public void startPayment() {
         /*
           You need to pass current activity in order to let Razorpay create CheckoutActivity
@@ -572,13 +574,29 @@ public class PetLoverDoctorChoosePaymentMethodActivity extends AppCompatActivity
         // set your id as below
         co.setKeyID(rzpayapikey);
 
-        //totalamount = amount;
-
-      /*  Double d = new Double(amount);
-        int amout = d.intValue();*/
 
 
-        Integer totalamout = Total_price*100;
+
+        double percentage = 0;
+        double percentageamount = 0;
+        double totalamout = 0 ;
+        double grandtotal =0;
+
+        try{
+            percentage = Double.parseDouble(PetHomeNewFragment.percentage);
+            Log.w(TAG,"percentage : "+percentage);
+            percentageamount = (Total_price*(percentage/100));
+            Log.w(TAG,"percentageamount : "+percentageamount);
+            totalamout = Total_price+percentageamount;
+            Log.w(TAG,"totalamout : "+totalamout);
+            grandtotal = totalamout * 100;
+            Log.w(TAG,"grandtotal : "+grandtotal);
+            Total_price = (int) totalamout;
+            Log.w(TAG,"Total_price : "+Total_price);
+
+
+        }catch(NumberFormatException ignored){
+        }
 
         try {
             JSONObject options = new JSONObject();
@@ -587,7 +605,7 @@ public class PetLoverDoctorChoosePaymentMethodActivity extends AppCompatActivity
             //You can omit the image option to fetch the image from dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
-            options.put("amount", totalamout);
+            options.put("amount", grandtotal);
 
 
             co.open(activity, options);

@@ -214,6 +214,8 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
 
             grand_total = extras.getInt("grand_total");
 
+            Log.w(TAG,"grand_total :  "+grand_total);
+
             if (grand_total!=0){
 
                 txt_grand_total.setText("\u20B9 "+ grand_total);
@@ -796,21 +798,27 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
         // set your id as below
         co.setKeyID(rzpayapikey);
 
-        //totalamount = amount;
 
-      /*  Double d = new Double(amount);
-        int amout = d.intValue();*/
 
-        int totalamout = grand_total*100;
-        Log.w(TAG,"totalamout : "+totalamout);
+
         double percentage = 0;
         double percentageamount = 0;
+        double totalamout = 0 ;
+        double grandtotal =0;
 
         try{
             percentage = Double.parseDouble(PetHomeNewFragment.percentage);
             Log.w(TAG,"percentage : "+percentage);
-            percentageamount = (totalamout*(percentage/100));
+            percentageamount = (grand_total*(percentage/100));
             Log.w(TAG,"percentageamount : "+percentageamount);
+            totalamout = grand_total+percentageamount;
+            Log.w(TAG,"totalamout : "+totalamout);
+            grandtotal = totalamout * 100;
+            Log.w(TAG,"grandtotal : "+grandtotal);
+            grand_total = (int) totalamout;
+            Log.w(TAG,"grand_total : "+grand_total);
+
+
         }catch(NumberFormatException ignored){
         }
 
@@ -821,7 +829,7 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
             //You can omit the image option to fetch the image from dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
-            options.put("amount", percentageamount);
+            options.put("amount", grandtotal);
 
 
             co.open(activity, options);
